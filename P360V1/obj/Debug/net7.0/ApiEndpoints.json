@@ -1,0 +1,318 @@
+[
+  {
+    "ContainingType": "API.Controllers.api.AccountsController",
+    "Method": "deleteAccount",
+    "RelativePath": "api/Accounts/DeleteAccount",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginsModel",
+        "Type": "Libs.Entity.LoginsModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.api.AccountsController",
+    "Method": "insertAccount",
+    "RelativePath": "api/Accounts/InsertAccount",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginsModel",
+        "Type": "Libs.Entity.LoginsModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.api.AccountsController",
+    "Method": "GetListAccount",
+    "RelativePath": "api/Accounts/ListAccount",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.api.AccountsController",
+    "Method": "loginAccount",
+    "RelativePath": "api/Accounts/LoginsAccount",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginsModel",
+        "Type": "Libs.Entity.LoginsModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.api.AccountsController",
+    "Method": "updateAccount",
+    "RelativePath": "api/Accounts/UpdateAccount",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginsModel",
+        "Type": "Libs.Entity.LoginsModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.api.AreasController",
+    "Method": "DeleteAreas",
+    "RelativePath": "api/Areas/DeleteAreas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "areasModel",
+        "Type": "Libs.Entity.AreasModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.api.AreasController",
+    "Method": "insertAreas",
+    "RelativePath": "api/Areas/InserAreas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "areasModel",
+        "Type": "Libs.Entity.AreasModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.api.AreasController",
+    "Method": "GetAreas",
+    "RelativePath": "api/Areas/ListAreas",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.api.AreasController",
+    "Method": "UpdateAreas",
+    "RelativePath": "api/Areas/UpadateAreas",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "areasModel",
+        "Type": "Libs.Entity.AreasModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.api.HotSpotsController",
+    "Method": "deleteHotSpot",
+    "RelativePath": "api/HotSpots/DeleteHotSpots",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CodeHotSpots",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.api.HotSpotsController",
+    "Method": "insertHotSpot",
+    "RelativePath": "api/HotSpots/InsertHotSpot",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "hotSpotModel",
+        "Type": "Libs.Entity.HotSpotsModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.api.HotSpotsController",
+    "Method": "GetHotSpotLists",
+    "RelativePath": "api/HotSpots/ListHotSpots",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.api.HotSpotsController",
+    "Method": "updateHotSpot",
+    "RelativePath": "api/HotSpots/UpdateHotSpot",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "hotSpotsModel",
+        "Type": "Libs.Entity.HotSpotsModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.api.LocationsController",
+    "Method": "deleteLocations",
+    "RelativePath": "api/Locations/DeleteLocations",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "khuvucsModel",
+        "Type": "Libs.Entity.LocationsModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.api.LocationsController",
+    "Method": "inserLocations",
+    "RelativePath": "api/Locations/InsertLocations",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "locationsModel",
+        "Type": "Libs.Entity.LocationsModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.api.LocationsController",
+    "Method": "GetListLocations",
+    "RelativePath": "api/Locations/ListLocations",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.api.LocationsController",
+    "Method": "updateLocations",
+    "RelativePath": "api/Locations/UpdateLocations",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "locationsModel",
+        "Type": "Libs.Entity.LocationsModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.api.ScenesController",
+    "Method": "deleteScenes",
+    "RelativePath": "api/Scenes/DeleteScenes",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "CodeScenes",
+        "Type": "System.Guid",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.api.ScenesController",
+    "Method": "GetScenesWithHotSpots",
+    "RelativePath": "api/Scenes/GetAllScenesWithHotSpots",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.api.ScenesController",
+    "Method": "insertScenes",
+    "RelativePath": "api/Scenes/InsertScenes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "scenesModel",
+        "Type": "Libs.Entity.ScenesModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.api.ScenesController",
+    "Method": "GetListsScenes",
+    "RelativePath": "api/Scenes/ListScenes",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.api.ScenesController",
+    "Method": "updateScenes",
+    "RelativePath": "api/Scenes/UpdateScenes",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "scenesModel",
+        "Type": "Libs.Entity.ScenesModel",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

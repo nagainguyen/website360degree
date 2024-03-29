@@ -1,0 +1,173 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\P360V1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{BE548EB5-7808-47AA-979B-56B625214201}|Libs\\Libs.csproj|c:\\users\\lu456\\onedrive\\m\u00E1y t\u00EDnh\\p360v1\\libs\\entity\\hotspots.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE548EB5-7808-47AA-979B-56B625214201}|Libs\\Libs.csproj|solutionrelative:libs\\entity\\hotspots.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE548EB5-7808-47AA-979B-56B625214201}|Libs\\Libs.csproj|c:\\users\\lu456\\onedrive\\m\u00E1y t\u00EDnh\\p360v1\\libs\\entity\\scenes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE548EB5-7808-47AA-979B-56B625214201}|Libs\\Libs.csproj|solutionrelative:libs\\entity\\scenes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE548EB5-7808-47AA-979B-56B625214201}|Libs\\Libs.csproj|c:\\users\\lu456\\onedrive\\m\u00E1y t\u00EDnh\\p360v1\\libs\\entity\\logins.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE548EB5-7808-47AA-979B-56B625214201}|Libs\\Libs.csproj|solutionrelative:libs\\entity\\logins.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE548EB5-7808-47AA-979B-56B625214201}|Libs\\Libs.csproj|c:\\users\\lu456\\onedrive\\m\u00E1y t\u00EDnh\\p360v1\\libs\\entity\\locations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE548EB5-7808-47AA-979B-56B625214201}|Libs\\Libs.csproj|solutionrelative:libs\\entity\\locations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE548EB5-7808-47AA-979B-56B625214201}|Libs\\Libs.csproj|c:\\users\\lu456\\onedrive\\m\u00E1y t\u00EDnh\\p360v1\\libs\\entity\\areas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE548EB5-7808-47AA-979B-56B625214201}|Libs\\Libs.csproj|solutionrelative:libs\\entity\\areas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE548EB5-7808-47AA-979B-56B625214201}|Libs\\Libs.csproj|c:\\users\\lu456\\onedrive\\m\u00E1y t\u00EDnh\\p360v1\\libs\\migrations\\20240314193635_initdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE548EB5-7808-47AA-979B-56B625214201}|Libs\\Libs.csproj|solutionrelative:libs\\migrations\\20240314193635_initdb.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E2A7398-5511-443E-8B1D-9A0358BF99B8}|P360V1\\P360V1.csproj|c:\\users\\lu456\\onedrive\\m\u00E1y t\u00EDnh\\p360v1\\p360v1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{4E2A7398-5511-443E-8B1D-9A0358BF99B8}|P360V1\\P360V1.csproj|solutionrelative:p360v1\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4E2A7398-5511-443E-8B1D-9A0358BF99B8}|P360V1\\P360V1.csproj|c:\\users\\lu456\\onedrive\\m\u00E1y t\u00EDnh\\p360v1\\p360v1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4E2A7398-5511-443E-8B1D-9A0358BF99B8}|P360V1\\P360V1.csproj|solutionrelative:p360v1\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BE548EB5-7808-47AA-979B-56B625214201}|Libs\\Libs.csproj|c:\\users\\lu456\\onedrive\\m\u00E1y t\u00EDnh\\p360v1\\libs\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE548EB5-7808-47AA-979B-56B625214201}|Libs\\Libs.csproj|solutionrelative:libs\\class1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Scenes.cs",
+              "DocumentMoniker": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\P360V1\\Libs\\Entity\\Scenes.cs",
+              "RelativeDocumentMoniker": "Libs\\Entity\\Scenes.cs",
+              "ToolTip": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\P360V1\\Libs\\Entity\\Scenes.cs",
+              "RelativeToolTip": "Libs\\Entity\\Scenes.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T19:36:49.54Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Logins.cs",
+              "DocumentMoniker": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\P360V1\\Libs\\Entity\\Logins.cs",
+              "RelativeDocumentMoniker": "Libs\\Entity\\Logins.cs",
+              "ToolTip": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\P360V1\\Libs\\Entity\\Logins.cs",
+              "RelativeToolTip": "Libs\\Entity\\Logins.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T19:36:47.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Locations.cs",
+              "DocumentMoniker": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\P360V1\\Libs\\Entity\\Locations.cs",
+              "RelativeDocumentMoniker": "Libs\\Entity\\Locations.cs",
+              "ToolTip": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\P360V1\\Libs\\Entity\\Locations.cs",
+              "RelativeToolTip": "Libs\\Entity\\Locations.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T19:36:43.491Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "HotSpots.cs",
+              "DocumentMoniker": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\P360V1\\Libs\\Entity\\HotSpots.cs",
+              "RelativeDocumentMoniker": "Libs\\Entity\\HotSpots.cs",
+              "ToolTip": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\P360V1\\Libs\\Entity\\HotSpots.cs",
+              "RelativeToolTip": "Libs\\Entity\\HotSpots.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T19:36:42.899Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "20240314193635_InitDB.cs",
+              "DocumentMoniker": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\P360V1\\Libs\\Migrations\\20240314193635_InitDB.cs",
+              "RelativeDocumentMoniker": "Libs\\Migrations\\20240314193635_InitDB.cs",
+              "ToolTip": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\P360V1\\Libs\\Migrations\\20240314193635_InitDB.cs",
+              "RelativeToolTip": "Libs\\Migrations\\20240314193635_InitDB.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T19:36:36.654Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\P360V1\\P360V1\\Program.cs",
+              "RelativeDocumentMoniker": "P360V1\\Program.cs",
+              "ToolTip": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\P360V1\\P360V1\\Program.cs",
+              "RelativeToolTip": "P360V1\\Program.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwCEAAAAVAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T19:35:53.296Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\P360V1\\P360V1\\appsettings.json",
+              "RelativeDocumentMoniker": "P360V1\\appsettings.json",
+              "ToolTip": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\P360V1\\P360V1\\appsettings.json",
+              "RelativeToolTip": "P360V1\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-03-14T19:35:40.726Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Areas.cs",
+              "DocumentMoniker": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\P360V1\\Libs\\Entity\\Areas.cs",
+              "RelativeDocumentMoniker": "Libs\\Entity\\Areas.cs",
+              "ToolTip": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\P360V1\\Libs\\Entity\\Areas.cs",
+              "RelativeToolTip": "Libs\\Entity\\Areas.cs",
+              "ViewState": "AQIAAB4AAAAAAAAAAAAYwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T19:34:43.309Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\P360V1\\Libs\\Class1.cs",
+              "RelativeDocumentMoniker": "Libs\\Class1.cs",
+              "ToolTip": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\P360V1\\Libs\\Class1.cs",
+              "RelativeToolTip": "Libs\\Class1.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-14T19:28:42.37Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

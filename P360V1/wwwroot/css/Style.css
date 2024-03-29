@@ -1,0 +1,58 @@
+﻿/* Reset CSS */
+body, h1, h2, p, div, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    background-color: #e1e8f2;
+    font-weight: bold;
+}
+
+.jumbotron {
+    background-color: #e1e8f2;
+    text-align: left;
+    padding: 0px;
+    margin-bottom: 0;
+}
+
+    .jumbotron h1 {
+        font-size: 2.5em;
+    }
+
+    .jumbotron p.lead {
+        background-color: #e1e8f2; 
+        font-family: 'Arial', sans-serif;
+    }
+
+    header {
+        background-color: #e1e8f2;
+        padding: 15px 0;
+        box-shadow: 0 4px 2px -2px gray;
+    }
+
+    .navbar {
+        background-color: #e1e8f2;
+    }
+
+    .footer {
+        padding: 1rem 0;
+        background-color: #e1e8f2;
+    }
+        font-size: 1.25em;
+    }
+
+.row {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #e1e8f2;
+    padding: 0px;
+    margin: 0;
+}
+
+#panorama {
+    width: 100vw; 
+    height: 100vh; 
+    margin: 0;
+}

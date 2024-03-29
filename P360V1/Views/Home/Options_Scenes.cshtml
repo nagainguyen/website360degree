@@ -1,0 +1,92 @@
+﻿@{
+    ViewData["Title"] = "Manager Data Scenes";
+}
+<br />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANAGE SCENES</title>
+    <link rel="stylesheet" type="text/css" href="~/css/Styles_options.css" />
+    <base href="/">
+    <style>
+        button {
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+            border: none;
+            border-radius: 10px;
+        }
+
+            button:hover {
+                background-color: #008CBA;
+                color: white;
+                transform: scale(1.1);
+            }
+
+        h1 {
+            font-size: 27px;
+            font-family: Arial;
+            color: black;
+        }
+        #editTable {
+            display: none;
+        }</style>
+</head>
+<body>
+    <h1>MANAGE SCENES</h1>
+    <form id="addDataForm">
+
+        <label for="InputIDLocations">ID Locations</label>
+        <input type="text" id="InputIDLocations" required>
+
+        <label for="InputIDScenes">ID Scenes</label>
+        <input type="text" id="InputIDScenes" required>
+
+        <label for="InputTitle">Title</label>
+        <input type="text" id="InputTitle" required>
+
+        <label for="InputURL">Url Scenes</label>
+        <input type="text" id="InputURL" required>
+
+        <label for="InputPitch">Vertical (Pitch)</></label>
+        <input type="number" step="0.1" id="InputPitch" required>
+
+        <label for="InputYaw">Horizontal (Yaw)</label>
+        <input type="number" step="0.1" id="InputYaw" required>
+
+        <button type="submit">Add New Scenes</button><br><br>
+    </form>
+    
+
+    <h1>LIST SCENES</h1>
+    <table id="ImageTable">
+        <thead>
+            <tr>
+                <th>Code Scenes </th>
+                <th>ID Locations</th>
+                <th>ID Scenes</th>
+                <th>Title</th>
+                <th>Url Image</th>
+                <th>Vertical (Pitch)</th>
+                <th>Horizontal (Yaw)</th>
+                <th>Acction slect</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <div id="editTable">
+        <input type="text" id="editCodeScenes" placeholder="Code Scenes">
+        <input type="text" id="editIDLocations" placeholder="ID Locations">
+        <input type="text" id="editIDScenes" placeholder="ID Scenes">
+        <input type="text" id="editTitle" placeholder="Title of next scenes">
+        <input type="text" id="editLink" placeholder="Url Scenes">
+        <input type="number" id="editPitch" placeholder="Vertical (Pitch)">
+        <input type="number" id="editYaw" placeholder="Horizontal (Yaw)">
+        <button id="saveChangesBtn">SAVE</button>
+    </div>
+    <script src="~/js/ManageScenes.js"></script>
+   
+</body>
+</html>
+

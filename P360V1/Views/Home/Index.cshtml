@@ -1,0 +1,458 @@
+﻿@{
+    ViewData["Title"] = "Website manage view scenes 360 degree";
+}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="~/css/Style.css" />
+
+<style>
+    body {
+        background-color: #e1e8f2;
+        font-family: 'Arial', sans-serif;
+    }
+
+    header {
+        background-color: #e1e8f2;
+        padding: 15px 0;
+        box-shadow: 0 4px 2px -2px gray;
+    }
+
+    .navbar {
+        background-color: #e1e8f2;
+    }
+
+    .footer {
+        padding: 1rem 0;
+        background-color: #e1e8f2;
+    }
+
+    .container {
+        display: flex;
+    }
+    #panorama-container {
+        width: 1200px;
+        height: 670px;
+        margin-left: auto;
+        margin-right: auto;
+        flex: 1;
+        position: relative;
+    }
+
+   
+    #hotspotForm {
+        display: none;
+        position: fixed;
+        top: 180px;
+        right: 50px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 50px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+        z-index: 999;
+    }
+    #scencesForm {
+        display: none;
+        position: fixed;
+        top: 180px;
+        left: 50px;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 50px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
+        z-index: 999;
+    }
+
+
+    #controls {
+        position: absolute;
+        bottom: 0;
+        z-index: 2;
+        text-align: center;
+        width: 100%;
+        padding-bottom: 3px;
+    }
+
+    .ctrl {
+        padding: 8px 5px;
+        width: 30px;
+        text-align: center;
+        background: #e5d8e8;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+        .ctrl:hover {
+            background: rgba(33, 150, 243, 0.8);
+        }
+
+    /* CSS cho form */
+
+    .form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+        .form-group label {
+            font-weight: bold;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="number"],
+        .form-group input[type="file"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .form-group button[type="submit"] {
+            padding: 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+            .form-group button[type="submit"]:hover {
+                background-color: #0056b3;
+            }
+
+    /* CSS cho nút đóng form */
+    .close-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        font-size: 24px;
+        color: #aaa;
+    }
+
+        .close-button:hover {
+            color: #555;
+        }
+
+</style>
+
+<div class="jumbotron" style="background-color: #e1e8f2">
+    <br />
+    <p class="lead" style="font-family: 'Times New Roman', Times, serif; font-size: 27px; background-color: #e1e8f2">Scenes 360Degree</p>
+</div>
+
+<div class="container">
+    <div id="panorama-container">
+        <div id="controls">
+            <div class="ctrl" id="custom-pan-up">&#9650;</div>
+            <div class="ctrl" id="custom-pan-down">&#9660;</div>
+            <div class="ctrl" id="custom-pan-left">&#9664;</div>
+            <div class="ctrl" id="custom-pan-right">&#9654;</div>
+        </div>
+    </div>
+</div>
+
+
+<div id="hotspotForm" >
+    <span id="closeHotspotFormButton" class="close-button">&times;</span>
+    <h3>Add new Hotspot</h3>
+    <form id="addHotspotForm" class="form">
+        <div class="form-group">
+            <label for="InputScenceID">Scene ID:</label>
+            <input type="text" id="InputScenceID" name="Scence ID">
+        </div>
+        <div class="form-group">
+            <label for="InputIDNextScence">ID Next Scene:</label>
+            <input type="text" id="InputIDNextScence" name="IDNextScence">
+        </div>
+        <div class="form-group">
+            <label for="InputText">Text:</label>
+            <input type="text" id="InputText" name="Text">
+        </div>
+        <div class="form-group">
+            <label for="pitchInput">Pitch:</label>
+            <input type="number" step="any" id="pitchInput" name="pitch">
+        </div>
+        <div class="form-group">
+            <label for="yawInput">Yaw:</label>
+            <input type="number" step="any" id="yawInput" name="yaw">
+        </div>
+        <button type="submit">ADD NEW HOTSPOT</button>
+    </form>
+</div>
+
+<!-- Form nhập thông tin cho scenes mới -->
+<div id="scencesForm">
+    <span id="closeScencesFormButton" class="close-button">&times;</span>
+    <h3>Add new scenes</h3>
+    <form id="addsceenForm" class="form">
+        <div class="form-group">
+            <label for="InputIDScence">ID Scene:</label>
+            <input type="text" id="InputNameScenceID" name="IDScence">
+        </div>
+        <div class="form-group">
+            <label for="InputIDLocations">ID Locations:</label>
+            <input type="text" id="InputIDLocationsID" name="IDLocations">
+        </div>
+        <div class="form-group">
+            <label for="InputTitle">Title:</label>
+            <input type="text" id="InputTitleID" name="title">
+        </div>
+        <div class="form-group">
+            <label for="InputURL">Select Image:</label>
+            <input type="file" id="InputURLID" name="InputURL" accept="image/*">
+        </div>
+        <div class="form-group">
+            <label for="InputPitch">Pitch:</label>
+            <input type="number" step="any" id="InputPitchID" name="InputPitch">
+        </div>
+        <div class="form-group">
+            <label for="InputYaw">Yaw:</label>
+            <input type="number" step="any" id="InputYawID" name="InputYaw">
+        </div>
+        <button type="submit">ADD NEW SCENES</button>
+    </form>
+</div>
+
+
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const viewerContainer = document.getElementById('panorama-container');
+        const hotspotForm = document.getElementById('hotspotForm');
+        const scencesForm = document.getElementById('scencesForm');
+        const closeHotspotFormButton = document.getElementById('closeHotspotFormButton');
+        const closeScencesFormButton = document.getElementById('closeScencesFormButton');
+
+
+        fetch('/api/Scenes/GetAllScenesWithHotSpots')
+            .then(function (response) {
+                if (response.status !== 200) {
+                    console.log('DATA ERROR! ' + response.status);
+                    return;
+                }
+
+                response.json().then(result1 => {
+                    let apiData = result1.data;
+                    console.log("data khi lay tu api");
+                    console.log(apiData);
+
+                    const firstScene = apiData[0].idScenes;
+                    const scenes = {};
+                    for (const data of apiData) {
+                        const hotSpots = [];
+
+                        for (const h of data.hotSpots) {
+                            hotSpots.push({
+                                "pitch": h.pitch,
+                                "yaw": h.yaw,
+                                "type": "scene",
+                                "text": h.text,
+                                "idNextScenes": h.idNextScenes
+                            });
+                        }
+                        const scene = {                          
+                            "title": data.title,
+                            "hfov": 110,
+                            "pitch": data.pitch,
+                            "yaw": data.yaw,
+                            "type": "equirectangular",
+                            "panorama": data.url,
+                            "hotSpots": hotSpots
+                        }
+                        scenes[data.IDScenes] = scene;
+                    }
+                    const dataScenes = {
+                        "default": {
+                            "firstScene": firstScene,
+                            "author": "MDT",
+                            "sceneFadeDuration": 1000,
+                            "autoLoad": true,
+                            "compass": true,
+                            "northOffset": 0
+                        },
+                        "scenes": scenes
+                    };
+                    console.log("data cua canh ");
+                    console.log(dataScenes);
+                    dataScenes.default.autoRotate = -3;
+                    displayPannellum(dataScenes);
+                })
+            })
+            .catch(err => {
+                console.log('Error :-S', err)
+            });
+
+        function displayPannellum(dataScenes) {
+            const viewer = pannellum.viewer('panorama-container', dataScenes);
+
+            viewerContainer.addEventListener('contextmenu', function (e) {
+                e.preventDefault();
+                const rect = viewerContainer.getBoundingClientRect();
+                const mouseX = e.clientX - rect.left;
+                const mouseY = e.clientY - rect.top;
+
+                const panoramaWidth = viewerContainer.clientWidth;
+                const panoramaHeight = viewerContainer.clientHeight;
+
+                const pitch = (mouseY / panoramaHeight) * 180 - 90;
+                const yaw = (mouseX / panoramaWidth) * 360 - 180;
+
+                hotspotForm.style.display = 'block';
+                scencesForm.style.display = 'block';
+
+                document.getElementById('pitchInput').value = pitch.toFixed(2);
+                document.getElementById('yawInput').value = yaw.toFixed(2);
+                const currentSceneID = viewer.getScene();
+                console.log(currentSceneID);
+                document.getElementById('InputScenceID').value = currentSceneID;
+            });
+            closeHotspotFormButton.addEventListener('click', function () {
+                hotspotForm.style.display = 'none';
+            });
+            closeScencesFormButton.addEventListener('click', function () {
+                scencesForm.style.display = 'none';
+            });
+
+            hotspotForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                createHotSpot();
+            });
+
+            scencesForm.addEventListener('submit', function (e) {
+                e.preventDefault();
+                createScences();
+            }); 
+        }
+
+        async function createScences() {
+            const fileInput = document.getElementById('imageInput');
+            const file = fileInput.files[0];
+
+            if (!file) {
+                alert('Vui lòng chọn một tệp ảnh.');
+                return;
+            }
+
+            const name = document.getElementById('InputNameScence').value;
+            const Title = document.getElementById('Inputtitle').value;
+            const pitch = parseFloat(document.getElementById('pitchscencesInput').value);
+            const yaw = parseFloat(document.getElementById('yawscencesInput').value);
+
+            const filename = file.name;
+
+            // Tạo một đường dẫn mới trong thư mục `wwwroot/Image`
+            const newImagePath = `wwwroot/Image/${filename}`;
+
+            try {
+                // Sao chép ảnh từ đường dẫn tạm thời tới thư mục `wwwroot/Image`
+                await copyFileToNewLocation(file, newImagePath);
+                console.log('Image copied successfully.');
+
+                // Lưu đường dẫn mới của ảnh vào cơ sở dữ liệu
+                const dataToPost = {
+                    Name: name,
+                    title: Title,
+                    linkImage: newImagePath,
+                    pitch: pitch,
+                    yaw: yaw
+                };
+
+                const urlScenes = '/api/Images/insertImage';
+                const insertResponse = await fetch(urlScenes, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(dataToPost),
+                });
+
+                if (insertResponse.ok) {
+                    console.log('SUCCESS');
+                    alert('Thêm ảnh mới thành công!');
+                    // Xóa giá trị trong các input sau khi thêm thành công
+                    document.getElementById('InputNameScence').value = '';
+                    document.getElementById('Inputtitle').value = '';
+                    document.getElementById('pitchscencesInput').value = '';
+                    document.getElementById('yawscencesInput').value = '';
+                } else {
+                    console.error('FAIL');
+                    alert('Thêm ảnh mới thất bại!');
+                }
+            } catch (error) {
+                console.error('ERROR:', error);
+                alert('Đã xảy ra lỗi khi sao chép ảnh hoặc lưu vào cơ sở dữ liệu.');
+            }
+        }
+
+        // Hàm sao chép tệp vào vị trí mới
+        function copyFileToNewLocation(file, destinationPath) {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onload = function () {
+                    const dataURL = reader.result;
+                    const link = document.createElement('a');
+                    link.href = dataURL;
+                    link.download = file.name;
+                    link.click();
+                    resolve();
+                };
+                reader.onerror = function () {
+                    reject(new Error('Failed to read file.'));
+                };
+                reader.readAsDataURL(file);
+            });
+        }
+
+
+
+
+        ////////////////////
+
+        async function createHotSpot() {
+            const url = '/api/HotSpots/insertHotSpot';
+
+            const IDScence = document.getElementById('InputScenceID').value;
+            const IDNextScence = document.getElementById('InputIDNextScence').value;
+            const text = document.getElementById('InputText').value;
+            const pitch = document.getElementById('pitchInput').value;
+            const yaw = document.getElementById('yawInput').value;
+
+            const dataToPost = {
+                SceneID: IDScence,
+                IDNextScene: IDNextScence,
+                text: text,
+                pitch: pitch,
+                yaw: yaw
+            };
+            console.log(dataToPost);
+            try {
+                const response = await fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(dataToPost),
+                });
+
+                if (response.ok) {
+                    console.log('SUCCESS');
+                    alert('Thêm hotspot mới thành công!');
+                    hotspotForm.reset(''); 
+                } else {
+                    console.error('FAIL');
+                    alert('Thêm hotspot mới thất bại!');
+                }
+            } catch (error) {
+                console.error('ERROR REQUEST:', error);
+            }
+        }
+    });
+
+</script>

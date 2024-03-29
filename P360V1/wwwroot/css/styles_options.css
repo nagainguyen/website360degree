@@ -1,0 +1,54 @@
+﻿/* Căn chỉnh và định dạng cho form */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+    /* Định dạng cho label */
+    form label {
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    /* Định dạng cho input */
+    form input {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+    }
+
+
+
+    /* Định dạng cho button */
+    form button {
+        padding: 15px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+/* Định dạng cho table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+/* Định dạng cho các ô trong table */
+table, th, td {
+    border: 1px solid #ddd;
+    font-family:Arial;
+    font-size:14px;
+
+}
+
+/* Định dạng cho các th trong table */
+th, td {
+    padding: 8px;
+    text-align: left;
+    font-family: Arial;
+    font-size: 14px;
+}

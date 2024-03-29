@@ -1,0 +1,63 @@
+﻿@{
+    ViewData["Title"] = "Login Your Account";
+    Layout = "~/Views/Shared/ViewLogins.cshtml";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="center" style="font-family: Arial, Helvetica, sans-serif">
+    <h1>MANAGE VIEW</h1>
+    <form id="tableLogin">
+        <div class="txt_field">
+            <input type="text" id="Input_NameAccount" name="NameAccount" required>
+            <span></span>
+            <label for="Input_NameAccount" style="color: #f5a171">Account</label>
+        </div>
+        <div class="txt_field">
+            <input type="password" id="Input_Password" name="Password" required>
+            <span></span>
+            <label for="Input_Password" style="color: #f5a171">Password</label>
+        </div>
+        <input type="submit" value="LOGIN">
+        <div class="signup_link">
+            <a href="/" style="font-size: 14px; font-weight: bold">Go Back Page View </a>
+        </div>
+    </form>
+</div>
+
+<script>
+    document.getElementById('tableLogin').addEventListener('submit', function (e) {
+        e.preventDefault(); 
+
+        const url = '/api/Accounts/LoginsAccount';
+       
+        const nameAccount = document.getElementById('Input_NameAccount').value;
+        const password = document.getElementById('Input_Password').value;
+
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                NameAccount: nameAccount,
+                Password: password,
+            }),
+        })
+            .then(response => {
+                if (response.ok) {
+                    localStorage.setItem('isLoggded', 1);
+                    window.location.href = '/Home/index'; 
+                } else {
+                    localStorage.setItem('isLoggded', 0);
+                    alert('Account or Password wrong!');
+                    
+                }
+            })
+            .catch(error => {
+              
+                console.error('SERVER ERROR! ', error);
+                
+            });
+    });
+</script>

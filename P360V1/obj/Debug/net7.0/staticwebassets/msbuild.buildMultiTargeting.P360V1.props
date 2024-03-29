@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\P360V1.props" />
+</Project>
