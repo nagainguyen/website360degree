@@ -16,11 +16,12 @@ namespace API.Controllers.api
         private LocationsService LocationsService;
         private ScenesService ScenesService;
         private HotSpotsService hotSpotsService;
-        public ScenesController(ScenesService scenesService, HotSpotsService hotSpotsService)
+        public ScenesController(ScenesService scenesService, HotSpotsService hotSpotsService, AreasService areasService, LocationsService locationsService)
         {
             this.ScenesService = scenesService;
             this.hotSpotsService = hotSpotsService;
-
+            this.AreasService = areasService;
+            this.LocationsService = locationsService;
         }
 
 
@@ -141,8 +142,8 @@ namespace API.Controllers.api
         {
             try
             {
-                List<Areas> areas = await AreasService.GetAreasListsAsync();
-                List<Locations> locations = await LocationsService.GetLocationsListsAsync();
+                List<Areas> areas = await AreasService.GetAllAreasAsync();
+                List<Locations> locations = await LocationsService.GetAllLocationsAsync();
                 List<Scenes> scenes = await ScenesService.GetScenesListsAsync();
                 List<HotSpots> allHotSpots = await hotSpotsService.GetAllHotSpotsAsync();
 
@@ -152,40 +153,39 @@ namespace API.Controllers.api
 
                 foreach (var area in areas)
                 {
-                    List<Locations> LocationsForAreas = locations
+                    List<Locations> locationsForArea = locations
                         .Where(x => x.IDAreas == area.IDAreas)
                         .ToList();
                     AreasWithLocations areasWithLocations1 = new AreasWithLocations
                     {
                         CodeAreas = area.CodeAreas,
                         IDAreas = area.IDAreas,
-                        NameAreas = area.NameAreas
+                        NameAreas = area.NameAreas,
+                        Locations = new List<Locations>()
                     };
-                    areasWithLocations.Add(areasWithLocations1);
-                    foreach (var location in locations)
+
+                    foreach (var location in locationsForArea)
                     {
-                        List<Scenes> ScenesForLocations = scenes
+                        List<Scenes> scenesForLocation = scenes
                             .Where(x => x.IDLocations == location.IDLocations)
                             .ToList();
                         LocationsWithScenes locationsWithScenes1 = new LocationsWithScenes
                         {
-
                             CodeLocations = location.CodeLocations,
                             IDAreas = location.IDAreas,
                             IDLocations = location.IDLocations,
-                            NameLocations = location.NameLocations
+                            NameLocations = location.NameLocations,
+                            Scenes = scenesForLocation
                         };
-                        locationsWithScenes.Add(locationsWithScenes1);
-                        foreach (var scene in scenes)
+
+                        foreach (var scene in scenesForLocation)
                         {
                             List<HotSpots> hotSpotsForScene = allHotSpots
                                 .Where(x => x.ScenesID == scene.IDScenes)
-
                                 .ToList();
 
                             ScenesWithHotSpotss sceneWithHotSpots = new ScenesWithHotSpotss
                             {
-
                                 CodeScenes = scene.CodeScenes,
                                 IDLocations = scene.IDLocations,
                                 IDScenes = scene.IDScenes,
@@ -197,16 +197,22 @@ namespace API.Controllers.api
                             };
                             scenesWithHotSpotsA.Add(sceneWithHotSpots);
                         }
-                    }
-                }
-                return Ok(new { status = true, message = "Thành công", data = areasWithLocations });
 
+                        
+                    }
+
+                    
+                    
+                }
+
+                return Ok(new { status = true, message = "Thành công", data = areasWithLocations });
             }
             catch (Exception ex)
             {
                 return BadRequest(new { status = false, message = $"Lỗi: {ex.Message}" });
             }
         }
+
         public class ScenesWithHotSpots
         {
             public Guid CodeScenes { get; set; }

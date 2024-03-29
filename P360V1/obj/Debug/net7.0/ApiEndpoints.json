@@ -275,6 +275,16 @@
   },
   {
     "ContainingType": "API.Controllers.api.ScenesController",
+    "Method": "GetAllWithAreasLocationsScenesHotSpots",
+    "RelativePath": "api/Scenes/GetAllWithAreasLocationsScenesHotSpots",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.api.ScenesController",
     "Method": "insertScenes",
     "RelativePath": "api/Scenes/InsertScenes",
     "HttpMethod": "POST",

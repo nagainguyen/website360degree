@@ -40,6 +40,11 @@ namespace Libs.Service
         {
             return applicationDbContext.Locations.ToList();
         }
+
+        public async Task<List<Locations>> GetAllLocationsAsync()
+        {
+            return await applicationDbContext.Locations.ToListAsync();
+        }
         //
         public Locations GetLocationsByCode(Guid code)
         {

@@ -26,3 +26,4 @@ C:\Users\lu456\OneDrive\Máy tính\PROJECT360\Libs\obj\Debug\net7.0\refint\Libs.
 C:\Users\lu456\OneDrive\Máy tính\PROJECT360\Libs\obj\Debug\net7.0\Libs.pdb
 C:\Users\lu456\OneDrive\Máy tính\PROJECT360\Libs\obj\Debug\net7.0\Libs.genruntimeconfig.cache
 C:\Users\lu456\OneDrive\Máy tính\PROJECT360\Libs\obj\Debug\net7.0\ref\Libs.dll
+C:\Users\lu456\OneDrive\Máy tính\PROJECT360\Libs\obj\Debug\net7.0\Libs.sourcelink.json

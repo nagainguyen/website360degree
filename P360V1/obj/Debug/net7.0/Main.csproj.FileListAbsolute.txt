@@ -82,3 +82,4 @@ C:\Users\lu456\OneDrive\Máy tính\PROJECT360\P360V1\obj\Debug\net7.0\refint\Mai
 C:\Users\lu456\OneDrive\Máy tính\PROJECT360\P360V1\obj\Debug\net7.0\Main.pdb
 C:\Users\lu456\OneDrive\Máy tính\PROJECT360\P360V1\obj\Debug\net7.0\Main.genruntimeconfig.cache
 C:\Users\lu456\OneDrive\Máy tính\PROJECT360\P360V1\obj\Debug\net7.0\ref\Main.dll
+C:\Users\lu456\OneDrive\Máy tính\PROJECT360\P360V1\obj\Debug\net7.0\Main.sourcelink.json
