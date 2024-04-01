@@ -77,14 +77,14 @@
     "ContainingType": "API.Controllers.api.AreasController",
     "Method": "DeleteAreas",
     "RelativePath": "api/Areas/DeleteAreas",
-    "HttpMethod": "POST",
+    "HttpMethod": "DELETE",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "areasModel",
-        "Type": "Libs.Entity.AreasModel",
-        "IsRequired": true
+        "Name": "CodeAreas",
+        "Type": "System.Guid",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
@@ -92,7 +92,7 @@
   {
     "ContainingType": "API.Controllers.api.AreasController",
     "Method": "insertAreas",
-    "RelativePath": "api/Areas/InserAreas",
+    "RelativePath": "api/Areas/InsertAreas",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,

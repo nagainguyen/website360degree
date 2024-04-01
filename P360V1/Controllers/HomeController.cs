@@ -32,7 +32,7 @@ namespace PROJECT360.Controllers
             return View();
         }
         
-        public IActionResult ManagerAreas()
+        public IActionResult Options_AllManage()
         {
             return View();
         }

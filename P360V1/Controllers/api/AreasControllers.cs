@@ -21,7 +21,7 @@ namespace API.Controllers.api
 
 
         [HttpPost]
-        [Route("InserAreas")]
+        [Route("InsertAreas")]
         public IActionResult insertAreas(AreasModel areasModel)
         {
             Areas areas = new Areas(); 
@@ -41,11 +41,11 @@ namespace API.Controllers.api
             return Ok(new { status = true, message = "SUCCESS", data = DiadiemLists });
         }
 
-        [HttpPost]
+        [HttpDelete]
         [Route("DeleteAreas")]
-        public IActionResult DeleteAreas(AreasModel areasModel)
+        public IActionResult DeleteAreas(Guid CodeAreas)
         {
-            AreasService.deleteAreas(areasModel.CodeAreas);
+            AreasService.deleteAreas(CodeAreas);
             return Ok(new { status = true, message = "DELETE SUCCESS" });
         }
 
@@ -53,15 +53,23 @@ namespace API.Controllers.api
         [Route("UpadateAreas")]
         public IActionResult UpdateAreas(AreasModel areasModel)
         {
-            Areas areas = AreasService.GetAreasByCode(areasModel.CodeAreas);
-
-            areas.NameAreas = areasModel.NameAreas;
-            areas.IDAreas = areasModel.IDAreas;
-
-            Ok(new { status = true, });
-            AreasService.updateAreas(areas);
-            return Ok(new { status = true, message = "", data = areas });
-
+            try
+            {
+                Areas areas = AreasService.GetAreasByCode(areasModel.CodeAreas);
+                if (areas == null)
+                {
+                    return NotFound(new { status = false, message = "Area not found" });
+                }
+                areas.IDAreas = areasModel.IDAreas;
+                areas.NameAreas = areasModel.NameAreas;
+              
+                AreasService.updateAreas(areas);
+                return Ok(new { status = true, message = "Update success", data = areas });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { status = false, message = $"Error: {ex.Message}" });
+            }
         }
 
 

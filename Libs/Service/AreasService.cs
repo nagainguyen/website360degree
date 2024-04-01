@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using static Libs.Repositories.IAreasRepository;
+using static Libs.Repositories.IScenesRepository;
 
 namespace Libs.Service
 {
@@ -64,6 +65,8 @@ namespace Libs.Service
             areasRepository.deleteAreas(areas);
             Save();
         }
+
+
         //
         public void updateAreas(Areas areas)
         {

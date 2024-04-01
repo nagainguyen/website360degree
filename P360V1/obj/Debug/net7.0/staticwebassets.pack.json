@@ -57,6 +57,10 @@
       "PackagePath": "staticwebassets\\js\\AddNewScenes.js"
     },
     {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\js\\AllManage.js",
+      "PackagePath": "staticwebassets\\js\\AllManage.js"
+    },
+    {
       "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\js\\ClickRight_Add.js",
       "PackagePath": "staticwebassets\\js\\ClickRight_Add.js"
     },
@@ -79,10 +83,6 @@
     {
       "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\js\\TestGetScenes.js",
       "PackagePath": "staticwebassets\\js\\TestGetScenes.js"
-    },
-    {
-      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\js\\ToaDo.js",
-      "PackagePath": "staticwebassets\\js\\ToaDo.js"
     },
     {
       "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\js\\UPDATE.js",

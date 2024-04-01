@@ -1,0 +1,92 @@
+﻿@{
+    ViewData["Title"] = "Manager Data Areas";
+}
+<br />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MANAGE SCENES</title>
+    <link rel="stylesheet" type="text/css" href="~/css/Styles_options.css" />
+    <base href="/">
+    <style>
+        button {
+            cursor: pointer;
+            transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+            border: none;
+            border-radius: 10px;
+        }
+
+            button:hover {
+                background-color: #008CBA;
+                color: white;
+                transform: scale(1.1);
+            }
+
+        h1 {
+            font-size: 27px;
+            font-family: Arial;
+            color: black;
+        }
+
+        #editTable {
+            display: none;
+        }</style>
+</head>
+<body>
+    <h1>MANAGE AREAS</h1>
+    <form id="addDataForm">
+
+        <label for="InputNameAreas">Name Areas</label>
+        <input type="text" id="InputNameAreas" required>
+
+        <label for="InputIDAreas">ID Areas</label>
+        <input type="text" id="InputIDAreas" required>
+
+        <button type="submit">Add New Areas</button><br><br>
+    </form>
+
+
+    <h1>List Areas</h1>
+    <table id="AreasTable">
+        <thead>
+            <tr>
+                <th>Code Areas </th>
+                <th>Name Areas</th>
+                <th>ID Areas</th>
+              
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <div id="editAreasTable">
+        <input type="text" id="editCodeAreas" placeholder="Code Areas">
+        <input type="text" id="editNameAreas" placeholder="Name Areas">
+        <input type="text" id="editIDAreas" placeholder="ID Areas">     
+        
+        <button id="saveChangesAreasBtn">SAVE</button>
+    </div>
+
+
+    <form id="addLocationsForm">
+        <div id="AddLocationsTable">
+            <input type="text" id="InputIDLocations" placeholder="ID Locations">
+            <input type="text" id="InputNameLocations" placeholder="Name Locations">
+            <input type="text" id="IDAreasOfLocations" placeholder="ID Areas Of Locations"> <!-- Sửa thành hidden để không hiển thị trên giao diện -->
+
+            <button type="submit">ADD</button>
+        </div>
+    </form>
+
+
+
+    
+
+
+
+    
+    <script src="~/js/AllManage.js"></script>
+</body>
+</html>
+

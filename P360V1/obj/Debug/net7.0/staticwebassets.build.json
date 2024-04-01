@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5P8cY4o5NXBS9xshzvyt0atUyUL1GyRHrVl2P3yLVEQ=",
+  "Hash": "wcSLQXDC1uE1syYsM5ehhtfb+Z9cS2zWErKkTYgNals=",
   "Source": "Main",
   "BasePath": "_content/Main",
   "Mode": "Default",
@@ -302,6 +302,25 @@
       "OriginalItemSpec": "wwwroot\\js\\AddNewScenes.js"
     },
     {
+      "Identity": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\js\\AllManage.js",
+      "SourceId": "Main",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\",
+      "BasePath": "_content/Main",
+      "RelativePath": "js/AllManage.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\AllManage.js"
+    },
+    {
       "Identity": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\js\\ClickRight_Add.js",
       "SourceId": "Main",
       "SourceType": "Discovered",
@@ -433,25 +452,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\TestGetScenes.js"
-    },
-    {
-      "Identity": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\js\\ToaDo.js",
-      "SourceId": "Main",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\",
-      "BasePath": "_content/Main",
-      "RelativePath": "js/ToaDo.js",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\js\\ToaDo.js"
     },
     {
       "Identity": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\js\\UPDATE.js",

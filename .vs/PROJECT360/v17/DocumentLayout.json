@@ -3,28 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\PROJECT360\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4E2A7398-5511-443E-8B1D-9A0358BF99B8}|P360V1\\Main.csproj|c:\\users\\lu456\\onedrive\\m\u00E1y t\u00EDnh\\project360\\p360v1\\views\\home\\options_hotspots.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4E2A7398-5511-443E-8B1D-9A0358BF99B8}|P360V1\\Main.csproj|solutionrelative:p360v1\\views\\home\\options_hotspots.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{4E2A7398-5511-443E-8B1D-9A0358BF99B8}|P360V1\\Main.csproj|c:\\users\\lu456\\onedrive\\m\u00E1y t\u00EDnh\\project360\\p360v1\\wwwroot\\js\\allmanage.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{4E2A7398-5511-443E-8B1D-9A0358BF99B8}|P360V1\\Main.csproj|solutionrelative:p360v1\\wwwroot\\js\\allmanage.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E2A7398-5511-443E-8B1D-9A0358BF99B8}|P360V1\\Main.csproj|c:\\users\\lu456\\onedrive\\m\u00E1y t\u00EDnh\\project360\\p360v1\\views\\home\\managerareas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4E2A7398-5511-443E-8B1D-9A0358BF99B8}|P360V1\\Main.csproj|solutionrelative:p360v1\\views\\home\\managerareas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{4E2A7398-5511-443E-8B1D-9A0358BF99B8}|P360V1\\Main.csproj|c:\\users\\lu456\\onedrive\\m\u00E1y t\u00EDnh\\project360\\p360v1\\views\\home\\options_allmanage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4E2A7398-5511-443E-8B1D-9A0358BF99B8}|P360V1\\Main.csproj|solutionrelative:p360v1\\views\\home\\options_allmanage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E2A7398-5511-443E-8B1D-9A0358BF99B8}|P360V1\\Main.csproj|c:\\users\\lu456\\onedrive\\m\u00E1y t\u00EDnh\\project360\\p360v1\\wwwroot\\js\\managehotspots.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{4E2A7398-5511-443E-8B1D-9A0358BF99B8}|P360V1\\Main.csproj|solutionrelative:p360v1\\wwwroot\\js\\managehotspots.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{BE548EB5-7808-47AA-979B-56B625214201}|Libs\\Libs.csproj|c:\\users\\lu456\\onedrive\\m\u00E1y t\u00EDnh\\project360\\libs\\entity\\locations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE548EB5-7808-47AA-979B-56B625214201}|Libs\\Libs.csproj|solutionrelative:libs\\entity\\locations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E2A7398-5511-443E-8B1D-9A0358BF99B8}|P360V1\\Main.csproj|c:\\users\\lu456\\onedrive\\m\u00E1y t\u00EDnh\\project360\\p360v1\\views\\shared\\viewhome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4E2A7398-5511-443E-8B1D-9A0358BF99B8}|P360V1\\Main.csproj|solutionrelative:p360v1\\views\\shared\\viewhome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{4E2A7398-5511-443E-8B1D-9A0358BF99B8}|P360V1\\Main.csproj|c:\\users\\lu456\\onedrive\\m\u00E1y t\u00EDnh\\project360\\p360v1\\wwwroot\\js\\managescenes.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{4E2A7398-5511-443E-8B1D-9A0358BF99B8}|P360V1\\Main.csproj|solutionrelative:p360v1\\wwwroot\\js\\managescenes.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E2A7398-5511-443E-8B1D-9A0358BF99B8}|P360V1\\Main.csproj|c:\\users\\lu456\\onedrive\\m\u00E1y t\u00EDnh\\project360\\p360v1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4E2A7398-5511-443E-8B1D-9A0358BF99B8}|P360V1\\Main.csproj|solutionrelative:p360v1\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E2A7398-5511-443E-8B1D-9A0358BF99B8}|P360V1\\Main.csproj|c:\\users\\lu456\\onedrive\\m\u00E1y t\u00EDnh\\project360\\p360v1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4E2A7398-5511-443E-8B1D-9A0358BF99B8}|P360V1\\Main.csproj|solutionrelative:p360v1\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{BE548EB5-7808-47AA-979B-56B625214201}|Libs\\Libs.csproj|c:\\users\\lu456\\onedrive\\m\u00E1y t\u00EDnh\\project360\\libs\\entity\\areas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BE548EB5-7808-47AA-979B-56B625214201}|Libs\\Libs.csproj|solutionrelative:libs\\entity\\areas.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,84 +30,70 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ManageHotSpots.js",
-              "DocumentMoniker": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\PROJECT360\\P360V1\\wwwroot\\js\\ManageHotSpots.js",
-              "RelativeDocumentMoniker": "P360V1\\wwwroot\\js\\ManageHotSpots.js",
-              "ToolTip": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\PROJECT360\\P360V1\\wwwroot\\js\\ManageHotSpots.js",
-              "RelativeToolTip": "P360V1\\wwwroot\\js\\ManageHotSpots.js",
-              "ViewState": "AQIAAB8AAAAAAAAAAAAQwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-04-01T18:06:14.808Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Options_HotSpots.cshtml",
-              "DocumentMoniker": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\PROJECT360\\P360V1\\Views\\Home\\Options_HotSpots.cshtml",
-              "RelativeDocumentMoniker": "P360V1\\Views\\Home\\Options_HotSpots.cshtml",
-              "ToolTip": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\PROJECT360\\P360V1\\Views\\Home\\Options_HotSpots.cshtml",
-              "RelativeToolTip": "P360V1\\Views\\Home\\Options_HotSpots.cshtml",
-              "ViewState": "AQIAACcAAAAAAAAAAAAAADUAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-01T18:06:01.118Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ManagerAreas.cshtml",
-              "DocumentMoniker": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\PROJECT360\\P360V1\\Views\\Home\\ManagerAreas.cshtml",
-              "RelativeDocumentMoniker": "P360V1\\Views\\Home\\ManagerAreas.cshtml",
-              "ToolTip": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\PROJECT360\\P360V1\\Views\\Home\\ManagerAreas.cshtml",
-              "RelativeToolTip": "P360V1\\Views\\Home\\ManagerAreas.cshtml",
-              "ViewState": "AQIAADkAAAAAAAAAAAAAAJ0AAABXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-01T18:04:05.582Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ViewHome.cshtml",
-              "DocumentMoniker": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\PROJECT360\\P360V1\\Views\\Shared\\ViewHome.cshtml",
-              "RelativeDocumentMoniker": "P360V1\\Views\\Shared\\ViewHome.cshtml",
-              "ToolTip": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\PROJECT360\\P360V1\\Views\\Shared\\ViewHome.cshtml",
-              "RelativeToolTip": "P360V1\\Views\\Shared\\ViewHome.cshtml",
-              "ViewState": "AQIAAIEAAAAAAAAAAAAAAJoAAAASAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-01T18:01:24.413Z",
+              "Title": "ManageScenes.js",
+              "DocumentMoniker": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\PROJECT360\\P360V1\\wwwroot\\js\\ManageScenes.js",
+              "RelativeDocumentMoniker": "P360V1\\wwwroot\\js\\ManageScenes.js",
+              "ToolTip": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\PROJECT360\\P360V1\\wwwroot\\js\\ManageScenes.js",
+              "RelativeToolTip": "P360V1\\wwwroot\\js\\ManageScenes.js",
+              "ViewState": "AQIAAIwAAAAAAAAAAAAhwJ4AAAA2AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-04-01T20:26:22.016Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\PROJECT360\\P360V1\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "P360V1\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\PROJECT360\\P360V1\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "P360V1\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AQIAAAkAAAAAAAAAAAAAABkAAABvAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-01T18:01:07.046Z",
+              "Title": "Areas.cs",
+              "DocumentMoniker": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\PROJECT360\\Libs\\Entity\\Areas.cs",
+              "RelativeDocumentMoniker": "Libs\\Entity\\Areas.cs",
+              "ToolTip": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\PROJECT360\\Libs\\Entity\\Areas.cs",
+              "RelativeToolTip": "Libs\\Entity\\Areas.cs",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T19:42:43.236Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Locations.cs",
+              "DocumentMoniker": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\PROJECT360\\Libs\\Entity\\Locations.cs",
+              "RelativeDocumentMoniker": "Libs\\Entity\\Locations.cs",
+              "ToolTip": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\PROJECT360\\Libs\\Entity\\Locations.cs",
+              "RelativeToolTip": "Libs\\Entity\\Locations.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAxwB4AAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T19:36:18.362Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\PROJECT360\\P360V1\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "P360V1\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\PROJECT360\\P360V1\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "P360V1\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAABgBAAAAAAAAAAAAAAMBAAAnAAAA",
+              "DocumentIndex": 1,
+              "Title": "Options_AllManage.cshtml",
+              "DocumentMoniker": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\PROJECT360\\P360V1\\Views\\Home\\Options_AllManage.cshtml",
+              "RelativeDocumentMoniker": "P360V1\\Views\\Home\\Options_AllManage.cshtml",
+              "ToolTip": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\PROJECT360\\P360V1\\Views\\Home\\Options_AllManage.cshtml",
+              "RelativeToolTip": "P360V1\\Views\\Home\\Options_AllManage.cshtml",
+              "ViewState": "AQIAADYAAAAAAAAAAAAQwEsAAAAdAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-01T17:55:10.673Z",
+              "WhenOpened": "2024-04-01T19:07:15.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AllManage.js",
+              "DocumentMoniker": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\PROJECT360\\P360V1\\wwwroot\\js\\AllManage.js",
+              "RelativeDocumentMoniker": "P360V1\\wwwroot\\js\\AllManage.js",
+              "ToolTip": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\PROJECT360\\P360V1\\wwwroot\\js\\AllManage.js",
+              "RelativeToolTip": "P360V1\\wwwroot\\js\\AllManage.js",
+              "ViewState": "AQIAAJ0AAAAAAAAAAAAAwK4AAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-04-01T19:05:28.159Z",
               "EditorCaption": ""
             }
           ]
