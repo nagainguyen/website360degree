@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lu456\\OneDrive\\Máy tính\\P360V1\\P360V1\\P360V1.csproj": {}
+    "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\P360V1.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lu456\\OneDrive\\Máy tính\\P360V1\\Libs\\Libs.csproj": {
+    "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\Libs\\Libs.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lu456\\OneDrive\\Máy tính\\P360V1\\Libs\\Libs.csproj",
+        "projectUniqueName": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\Libs\\Libs.csproj",
         "projectName": "Libs",
-        "projectPath": "C:\\Users\\lu456\\OneDrive\\Máy tính\\P360V1\\Libs\\Libs.csproj",
+        "projectPath": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\Libs\\Libs.csproj",
         "packagesPath": "C:\\Users\\lu456\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lu456\\OneDrive\\Máy tính\\P360V1\\Libs\\obj\\",
+        "outputPath": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\Libs\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lu456\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -47,23 +47,23 @@
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.17, )"
+              "version": "[7.0.11, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.17, )"
+              "version": "[7.0.11, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[7.0.17, )"
+              "version": "[7.0.11, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.17, )"
+              "version": "[7.0.11, )"
             }
           },
           "imports": [
@@ -86,14 +86,14 @@
         }
       }
     },
-    "C:\\Users\\lu456\\OneDrive\\Máy tính\\P360V1\\P360V1\\P360V1.csproj": {
+    "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\P360V1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lu456\\OneDrive\\Máy tính\\P360V1\\P360V1\\P360V1.csproj",
+        "projectUniqueName": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\P360V1.csproj",
         "projectName": "P360V1",
-        "projectPath": "C:\\Users\\lu456\\OneDrive\\Máy tính\\P360V1\\P360V1\\P360V1.csproj",
+        "projectPath": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\P360V1.csproj",
         "packagesPath": "C:\\Users\\lu456\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lu456\\OneDrive\\Máy tính\\P360V1\\P360V1\\obj\\",
+        "outputPath": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lu456\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -110,8 +110,8 @@
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "C:\\Users\\lu456\\OneDrive\\Máy tính\\P360V1\\Libs\\Libs.csproj": {
-                "projectPath": "C:\\Users\\lu456\\OneDrive\\Máy tính\\P360V1\\Libs\\Libs.csproj"
+              "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\Libs\\Libs.csproj": {
+                "projectPath": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\Libs\\Libs.csproj"
               }
             }
           }
@@ -133,23 +133,23 @@
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[7.0.17, )"
+              "version": "[7.0.11, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.17, )"
+              "version": "[7.0.11, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[7.0.17, )"
+              "version": "[7.0.11, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[7.0.17, )"
+              "version": "[7.0.11, )"
             }
           },
           "imports": [

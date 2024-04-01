@@ -234,7 +234,7 @@
         fetch('/api/Scenes/GetAllScenesWithHotSpots')
             .then(function (response) {
                 if (response.status !== 200) {
-                    console.log('DATA ERROR! ' + response.status);
+                    console.log('LỖI DỮ LIỆU! ' + response.status);
                     return;
                 }
 
@@ -254,10 +254,10 @@
                                 "yaw": h.yaw,
                                 "type": "scene",
                                 "text": h.text,
-                                "idNextScenes": h.idNextScenes
+                                "idNextScenes": h.iDNextScenes
                             });
                         }
-                        const scene = {                          
+                        const scene = {
                             "title": data.title,
                             "hfov": 110,
                             "pitch": data.pitch,
@@ -266,7 +266,9 @@
                             "panorama": data.url,
                             "hotSpots": hotSpots
                         }
-                        scenes[data.IDScenes] = scene;
+                        
+                        scenes[data.idScenes] = scene; 
+                        
                     }
                     const dataScenes = {
                         "default": {
@@ -281,12 +283,14 @@
                     };
                     console.log("data cua canh ");
                     console.log(dataScenes);
+                    console.log("data idscenes ");
+                   
                     dataScenes.default.autoRotate = -3;
                     displayPannellum(dataScenes);
                 })
             })
             .catch(err => {
-                console.log('Error :-S', err)
+                console.log('Lỗi :-S', err)
             });
 
         function displayPannellum(dataScenes) {

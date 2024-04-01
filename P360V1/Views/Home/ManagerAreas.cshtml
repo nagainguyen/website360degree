@@ -141,26 +141,26 @@
                 }
             }
 
-            function displayAreas(dataList) {
-                const tableBody = document.querySelector('#AreasTable tbody');
-                tableBody.innerHTML = '';
+            // function displayAreas(dataList) {
+            //     const tableBody = document.querySelector('#AreasTable tbody');
+            //     tableBody.innerHTML = '';
 
-                dataList.forEach(data => {
-                    const row = document.createElement('tr');
-                    row.innerHTML = `
-                        <td>${data.codeAreas}</td>
-                        <td>${data.nameAreas}</td>
-                        <td>${data.idAreas}</td>
+            //     dataList.forEach(data => {
+            //         const row = document.createElement('tr');
+            //         row.innerHTML = `
+            //             <td>${data.codeAreas}</td>
+            //             <td>${data.nameAreas}</td>
+            //             <td>${data.idAreas}</td>
                         
-                        <td>
-                            <button onclick="editScenes('${data.codeScenes}')">UPDATE</button>
-                            <button onclick="confirmDelete('${data.codeScenes}')">DELETE</button>
-                            <a href="/Locations/Create?areaCode=@area.CodeAreas">Add Location</a>
-                        </td>
-                    `;
-                    tableBody.appendChild(row);
-                });
-            }
+            //             <td>
+            //                 <button onclick="editScenes('${data.codeScenes}')">UPDATE</button>
+            //                 <button onclick="confirmDelete('${data.codeScenes}')">DELETE</button>
+            //                 <a href="/Locations/Create?areaCode=data.CodeAreas">Add Location</a>
+            //             </td>
+            //         `;
+            //         tableBody.appendChild(row);
+            //     });
+            // }
 
             window.confirmDelete = function (codeScenes) {
                 const shouldDelete = confirm('You want to delete this scenes?');

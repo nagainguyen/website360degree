@@ -21,9 +21,9 @@ C:\Users\lu456\OneDrive\Máy tính\PROJECT360\Libs\obj\Debug\net7.0\Libs.Generat
 C:\Users\lu456\OneDrive\Máy tính\PROJECT360\Libs\obj\Debug\net7.0\Libs.AssemblyInfoInputs.cache
 C:\Users\lu456\OneDrive\Máy tính\PROJECT360\Libs\obj\Debug\net7.0\Libs.AssemblyInfo.cs
 C:\Users\lu456\OneDrive\Máy tính\PROJECT360\Libs\obj\Debug\net7.0\Libs.csproj.CoreCompileInputs.cache
+C:\Users\lu456\OneDrive\Máy tính\PROJECT360\Libs\obj\Debug\net7.0\Libs.sourcelink.json
 C:\Users\lu456\OneDrive\Máy tính\PROJECT360\Libs\obj\Debug\net7.0\Libs.dll
 C:\Users\lu456\OneDrive\Máy tính\PROJECT360\Libs\obj\Debug\net7.0\refint\Libs.dll
 C:\Users\lu456\OneDrive\Máy tính\PROJECT360\Libs\obj\Debug\net7.0\Libs.pdb
 C:\Users\lu456\OneDrive\Máy tính\PROJECT360\Libs\obj\Debug\net7.0\Libs.genruntimeconfig.cache
 C:\Users\lu456\OneDrive\Máy tính\PROJECT360\Libs\obj\Debug\net7.0\ref\Libs.dll
-C:\Users\lu456\OneDrive\Máy tính\PROJECT360\Libs\obj\Debug\net7.0\Libs.sourcelink.json

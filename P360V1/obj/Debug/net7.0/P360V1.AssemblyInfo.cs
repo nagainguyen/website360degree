@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("P360V1")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9d9eec0b74c6871e3a452d165564ef43a5bd2dce")]
 [assembly: System.Reflection.AssemblyProductAttribute("P360V1")]
 [assembly: System.Reflection.AssemblyTitleAttribute("P360V1")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
