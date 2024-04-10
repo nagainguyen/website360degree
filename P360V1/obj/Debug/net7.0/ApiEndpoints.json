@@ -118,7 +118,7 @@
   {
     "ContainingType": "API.Controllers.api.AreasController",
     "Method": "UpdateAreas",
-    "RelativePath": "api/Areas/UpadateAreas",
+    "RelativePath": "api/Areas/UpdateAreas",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,

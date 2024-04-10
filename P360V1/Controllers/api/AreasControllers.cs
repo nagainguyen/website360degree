@@ -37,8 +37,8 @@ namespace API.Controllers.api
         public IActionResult GetAreas()
         {
 
-            List<Areas> DiadiemLists = AreasService.GetAreas();
-            return Ok(new { status = true, message = "SUCCESS", data = DiadiemLists });
+            List<Areas> AreasLists = AreasService.GetAreas();
+            return Ok(new { status = true, message = "SUCCESS", data = AreasLists });
         }
 
         [HttpDelete]
@@ -50,7 +50,7 @@ namespace API.Controllers.api
         }
 
         [HttpPost]
-        [Route("UpadateAreas")]
+        [Route("UpdateAreas")]
         public IActionResult UpdateAreas(AreasModel areasModel)
         {
             try

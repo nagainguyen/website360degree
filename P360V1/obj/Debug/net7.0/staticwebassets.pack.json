@@ -5,6 +5,170 @@
       "PackagePath": "staticwebassets\\Main.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Assets\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\Assets\\css\\bootstrap.css"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Assets\\css\\responsive.css",
+      "PackagePath": "staticwebassets\\Assets\\css\\responsive.css"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Assets\\css\\style.css",
+      "PackagePath": "staticwebassets\\Assets\\css\\style.css"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Assets\\css\\style.css.map",
+      "PackagePath": "staticwebassets\\Assets\\css\\style.css.map"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Assets\\css\\style.scss",
+      "PackagePath": "staticwebassets\\Assets\\css\\style.scss"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Assets\\images\\arrow-end.png",
+      "PackagePath": "staticwebassets\\Assets\\images\\arrow-end.png"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Assets\\images\\arrow-middle.png",
+      "PackagePath": "staticwebassets\\Assets\\images\\arrow-middle.png"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Assets\\images\\arrow-start.png",
+      "PackagePath": "staticwebassets\\Assets\\images\\arrow-start.png"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Assets\\images\\c-1.png",
+      "PackagePath": "staticwebassets\\Assets\\images\\c-1.png"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Assets\\images\\c-2.png",
+      "PackagePath": "staticwebassets\\Assets\\images\\c-2.png"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Assets\\images\\c-3.png",
+      "PackagePath": "staticwebassets\\Assets\\images\\c-3.png"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Assets\\images\\d-1.png",
+      "PackagePath": "staticwebassets\\Assets\\images\\d-1.png"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Assets\\images\\d-2.png",
+      "PackagePath": "staticwebassets\\Assets\\images\\d-2.png"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Assets\\images\\d-3.png",
+      "PackagePath": "staticwebassets\\Assets\\images\\d-3.png"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Assets\\images\\d-4.png",
+      "PackagePath": "staticwebassets\\Assets\\images\\d-4.png"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Assets\\images\\d-5.png",
+      "PackagePath": "staticwebassets\\Assets\\images\\d-5.png"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Assets\\images\\envelope-white.png",
+      "PackagePath": "staticwebassets\\Assets\\images\\envelope-white.png"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Assets\\images\\fb.png",
+      "PackagePath": "staticwebassets\\Assets\\images\\fb.png"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Assets\\images\\hero-bg.jpg",
+      "PackagePath": "staticwebassets\\Assets\\images\\hero-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Assets\\images\\insta.png",
+      "PackagePath": "staticwebassets\\Assets\\images\\insta.png"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Assets\\images\\linkedin.png",
+      "PackagePath": "staticwebassets\\Assets\\images\\linkedin.png"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Assets\\images\\location-white.png",
+      "PackagePath": "staticwebassets\\Assets\\images\\location-white.png"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Assets\\images\\location.png",
+      "PackagePath": "staticwebassets\\Assets\\images\\location.png"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Assets\\images\\map-img.png",
+      "PackagePath": "staticwebassets\\Assets\\images\\map-img.png"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Assets\\images\\menu.png",
+      "PackagePath": "staticwebassets\\Assets\\images\\menu.png"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Assets\\images\\next.png",
+      "PackagePath": "staticwebassets\\Assets\\images\\next.png"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Assets\\images\\prev.png",
+      "PackagePath": "staticwebassets\\Assets\\images\\prev.png"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Assets\\images\\quote.png",
+      "PackagePath": "staticwebassets\\Assets\\images\\quote.png"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Assets\\images\\search-icon.png",
+      "PackagePath": "staticwebassets\\Assets\\images\\search-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Assets\\images\\target-bg.jpg",
+      "PackagePath": "staticwebassets\\Assets\\images\\target-bg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Assets\\images\\telephone-white.png",
+      "PackagePath": "staticwebassets\\Assets\\images\\telephone-white.png"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Assets\\images\\twitter.png",
+      "PackagePath": "staticwebassets\\Assets\\images\\twitter.png"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Assets\\images\\user.png",
+      "PackagePath": "staticwebassets\\Assets\\images\\user.png"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Assets\\images\\w-1.png",
+      "PackagePath": "staticwebassets\\Assets\\images\\w-1.png"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Assets\\images\\w-2.png",
+      "PackagePath": "staticwebassets\\Assets\\images\\w-2.png"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Assets\\images\\w-3.png",
+      "PackagePath": "staticwebassets\\Assets\\images\\w-3.png"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Assets\\images\\w-4.png",
+      "PackagePath": "staticwebassets\\Assets\\images\\w-4.png"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Assets\\images\\who-img.jpg",
+      "PackagePath": "staticwebassets\\Assets\\images\\who-img.jpg"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Assets\\images\\youtube.png",
+      "PackagePath": "staticwebassets\\Assets\\images\\youtube.png"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Assets\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\Assets\\js\\bootstrap.js"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Assets\\js\\jquery-3.4.1.min.js",
+      "PackagePath": "staticwebassets\\Assets\\js\\jquery-3.4.1.min.js"
+    },
+    {
       "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Image\\bg-login.jpg",
       "PackagePath": "staticwebassets\\Image\\bg-login.jpg"
     },
@@ -25,12 +189,12 @@
       "PackagePath": "staticwebassets\\Image\\winter.jpg"
     },
     {
-      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\css\\Style.css",
-      "PackagePath": "staticwebassets\\css\\Style.css"
-    },
-    {
       "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\css\\form.css",
       "PackagePath": "staticwebassets\\css\\form.css"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\css\\index.css",
+      "PackagePath": "staticwebassets\\css\\index.css"
     },
     {
       "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\css\\logins.css",
@@ -39,6 +203,10 @@
     {
       "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\css\\style.css",
+      "PackagePath": "staticwebassets\\css\\style.css"
     },
     {
       "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\css\\styles_options.css",
@@ -87,6 +255,10 @@
     {
       "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\js\\UPDATE.js",
       "PackagePath": "staticwebassets\\js\\UPDATE.js"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\js\\index.js",
+      "PackagePath": "staticwebassets\\js\\index.js"
     },
     {
       "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\js\\site.js",
@@ -159,6 +331,22 @@
     {
       "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-theme.css.map"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-theme.min.css.map"
     },
     {
       "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
