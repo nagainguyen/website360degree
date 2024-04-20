@@ -1,0 +1,91 @@
+﻿
+@{
+    ViewData["Title"] = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+@* <link rel="stylesheet" type="text/css" href="~/css/Style.css" /> *@
+<link rel="stylesheet" type="text/css" href="~/css/index.css" />
+<script src="~/js/index.js"></script>
+
+<div class="jumbotron" style="background-color: #e1e8f2">
+    <br />
+    <p class="lead" style="font-family: 'Times New Roman', Times, serif; font-size: 27px; background-color: #e1e8f2">Scenes 360Degree</p>
+</div>
+
+<div class="container">
+    <div id="panorama-container">
+        <div id="controls">
+            <div class="ctrl" id="custom-pan-up">&#9650;</div>
+            <div class="ctrl" id="custom-pan-down">&#9660;</div>
+            <div class="ctrl" id="custom-pan-left">&#9664;</div>
+            <div class="ctrl" id="custom-pan-right">&#9654;</div>
+        </div>
+    </div>
+</div>
+
+
+<div id="hotspotForm">
+    <span id="closeHotspotFormButton" class="close-button">&times;</span>
+    <h3>Add new Hotspot</h3>
+    <form id="addHotspotForm" class="form">
+        <div class="form-group">
+            <label for="InputScenceID">Scene ID:</label>
+            <input type="text" id="InputScenceID" name="ScenesID">
+        </div>
+        <div class="form-group">
+            <label for="InputIDNextScence">ID Next Scene:</label>
+            <input type="text" id="InputIDNextScence" name="IDNextScenes">
+        </div>
+        <div class="form-group">
+            <label for="InputText">Text:</label>
+            <input type="text" id="InputText" name="Text">
+        </div>
+        <div class="form-group">
+            <label for="pitchInput">Pitch:</label>
+            <input type="number" step="any" id="pitchInput" name="pitch">
+        </div>
+        <div class="form-group">
+            <label for="yawInput">Yaw:</label>
+            <input type="number" step="any" id="yawInput" name="yaw">
+        </div>
+        <button type="submit">ADD NEW HOTSPOT</button>
+    </form>
+</div>
+
+<!-- Form nhập thông tin cho scenes mới -->
+<div id="scencesForm">
+    <span id="closeScencesFormButton" class="close-button">&times;</span>
+    <h3>Add new scenes</h3>
+    <form id="addsceenForm" class="form">
+        <div class="form-group">
+            <label for="InputIDScence">ID Scene:</label>
+            <input type="text" id="InputScenceID" name="IDScence">
+        </div>
+        <div class="form-group">
+            <label for="InputIDLocations">ID Locations:</label>
+            <input type="text" id="InputIDLocationsID" name="IDLocations">
+        </div>
+        <div class="form-group">
+            <label for="InputTitle">Title:</label>
+            <input type="text" id="InputTitleID" name="title">
+        </div>
+        <div class="form-group">
+            <label for="InputURL">Select Image:</label>
+            <input type="text" id="InputURLID" name="InputURL">
+        </div>
+
+        <div class="form-group">
+            <label for="InputPitch">Pitch:</label>
+            <input type="number" step="any" id="InputPitchID" name="InputPitch">
+        </div>
+        <div class="form-group">
+            <label for="InputYaw">Yaw:</label>
+            <input type="number" step="any" id="InputYawID" name="InputYaw">
+        </div>
+        <button type="submit">ADD NEW SCENES</button>
+    </form>
+</div>
+

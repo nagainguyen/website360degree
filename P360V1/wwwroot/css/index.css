@@ -19,16 +19,12 @@ header {
     background-color: #e1e8f2;
 }
 
-.container {
-    display: flex;
-}
-
 #panorama-container {
     width: 1200px;
     height: 670px;
     margin-left: auto;
     margin-right: auto;
-    flex: 1;
+   
     position: relative;
 }
 

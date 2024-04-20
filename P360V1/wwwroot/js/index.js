@@ -30,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
                             "yaw": h.yaw,
                             "type": "scene",
                             "text": h.text,
-                            "idNextScenes": h.idNextScenes
+                            "sceneId": h.idNextScenes
 
                         });
                     }
@@ -59,25 +59,34 @@ document.addEventListener('DOMContentLoaded', function () {
                     },
                     "scenes": scenes
                 };
-                console.log("data cua canh ");
-                console.log(dataScenes);
-                console.log("data idscenes ");
+                console.log("data cua canh ", dataScenes);
 
                 dataScenes.default.autoRotate = -3;
                 displayPannellum(dataScenes);
             })
         })
         .catch(err => {
-            console.log('Lỗi :-S', err)
+            console.log('ERROR :', err)
         });
+  
 
     function displayPannellum(dataScenes) {
         const viewer = pannellum.viewer('panorama-container', dataScenes);
-        
+        document.getElementById('custom-pan-up').addEventListener('click', function (e) {
+            viewer.setPitch(viewer.getPitch() + 10);
+        });
+        document.getElementById('custom-pan-down').addEventListener('click', function (e) {
+            viewer.setPitch(viewer.getPitch() - 10);
+        });
+        document.getElementById('custom-pan-left').addEventListener('click', function (e) {
+            viewer.setYaw(viewer.getYaw() - 10);
+        });
+        document.getElementById('custom-pan-right').addEventListener('click', function (e) {
+            viewer.setYaw(viewer.getYaw() + 10);
+        });
         viewerContainer.addEventListener('contextmenu', function (e) {
-           /* e.preventDefault();*/
+             e.preventDefault();
 
-            
             const [pitch, yaw] = viewer.mouseEventToCoords(e);
 
             hotspotForm.style.display = 'block';
@@ -105,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function () {
         hotspotForm.addEventListener('submit', function (e) {
             e.preventDefault();
             createHotSpot();
-            
+
         });
 
         scencesForm.addEventListener('submit', function (e) {
@@ -115,23 +124,23 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     async function createScences() {
-        
+
         const location = document.getElementById('InputIDLocationsID').value;
         const idScenes = document.getElementById('InputScenceID').value;
         const titleScenes = document.getElementById('InputTitleID').value;
         const filename = document.getElementById('InputURLID').value;
         const pitchScenes = parseFloat(document.getElementById('InputPitchID').value);
         const yawScenes = parseFloat(document.getElementById('InputYawID').value);
-            // Lưu đường dẫn mới của ảnh vào cơ sở dữ liệu
-            const dataToPost = {
+        // Lưu đường dẫn mới của ảnh vào cơ sở dữ liệu
+        const dataToPost = {
 
-                IDLocations: location,
-                IDScenes: idScenes,
-                TitleScenes: titleScenes,
-                UrlScenes: filename,
-                PitchScenes: pitchScenes,
-                YawScenes: yawScenes
-            };
+            IDLocations: location,
+            IDScenes: idScenes,
+            TitleScenes: titleScenes,
+            UrlScenes: filename,
+            PitchScenes: pitchScenes,
+            YawScenes: yawScenes
+        };
 
         const urlScenes = '/api/Scenes/InsertScenes';
         try {

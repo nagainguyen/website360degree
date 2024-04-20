@@ -1,0 +1,56 @@
+﻿#wrapper {
+    width: 100%;
+}
+
+#header {
+    background: url(../images/gioithieu/gt1.jpg);
+    color: #ffffff;
+    padding: 10px;
+    text-align: center;
+}
+
+#sm-gt {
+    background-color: black;
+    color: #ffffff;
+    padding: 10px;
+    display: flex;
+}
+
+#sm {
+    flex-basis: 60%;
+    background-color: black;
+    color: #ffffff;
+    padding: 10px;
+    padding-right: 20px;
+}
+
+h2 {
+    text-align: center;
+}
+
+#gt {
+    flex-basis: 70%;
+    background-color: black;
+    color: #ffffff;
+    padding: 10px;
+    padding-right: 20px;
+}
+
+#main-content {
+    color: #ffffff;
+    padding: 10px;
+    display: flex;
+}
+
+#content {
+    flex-basis: 50%;
+    background: url('/images/gioithieu/gt2.jpg');
+    background-size: cover;
+    color: #0c0c0c;
+    padding: 10px;
+    padding-right: 20px;
+}
+
+#container {
+    background: #0c0c0c;
+}

@@ -1,4 +1,6 @@
-﻿const apiUrl = '/api/HotSpots/ListHotSpots';
+﻿/*const { data } = require("jquery");*/
+
+const apiUrl = '/api/HotSpots/ListHotSpots';
 let dataList; 
 document.addEventListener('DOMContentLoaded', function () {
     getHotSpotsAndDisplay();
@@ -66,20 +68,25 @@ document.addEventListener('DOMContentLoaded', function () {
                 yaw: item.yaw
             }));
 
-            displayImages(dataList);
+            displayHotSpots(dataList);
             console.log(dataList);
         } catch (error) {
             console.error('SERVER IS NOT RESPONDING!', error);
         }
     }
 
-    function displayImages(dataList) {
+    function displayHotSpots(dataList) {
         const tableBody = document.querySelector('#HotSpotTable tbody');
         tableBody.innerHTML = '';
 
-        dataList.forEach(data => {
-            const row = document.createElement('tr');
-            row.innerHTML = `
+        if (dataList.length === 0) {
+            const noResultsRow = document.createElement('tr');
+            noResultsRow.innerHTML = `<td colspan="6">No results found.</td>`;
+            tableBody.appendChild(noResultsRow);
+        } else {
+            dataList.forEach(data => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
                 <td>${data.codeHotSpots}</td>
                 <td>${data.scenesID}</td>
                 <td>${data.idNextScenes}</td>
@@ -91,9 +98,11 @@ document.addEventListener('DOMContentLoaded', function () {
                     <button onclick="confirmDelete('${data.codeHotSpots}')">DELETE</button>
                 </td>
             `;
-            tableBody.appendChild(row);
-        });
+                tableBody.appendChild(row);
+            });
+        }
     }
+
 
     window.confirmDelete = function (codeHotSpots) {
         const shouldDelete = confirm('You want to delete this hotspot?');
@@ -195,4 +204,11 @@ document.addEventListener('DOMContentLoaded', function () {
         const editTable = document.getElementById('editTable');
         editTable.style.display = 'none';
     }
+  
+
+
+
+
+
+
 });

@@ -1,5 +1,6 @@
 ﻿@{
     ViewData["Title"] = "Manager Data Areas";
+
 }
 <br />
 <!DOCTYPE html>
@@ -35,43 +36,83 @@
         }</style>
 </head>
 <body>
-    <h1>MANAGE AREAS</h1>
+    <h1>Quản lý dữ liệu</h1>
+    <h2>Quản lý khu vực</h2>
+    @*//Areas*@
     <form id="addDataForm">
+        <label for="InputNameAreas">Tên khu vực: </label>
+        <input type="text" id="InputNameAreas" placeholder="Nhập tên khu vực" required>
+        <div id="nameError" style="color: red;"></div>
 
-        <label for="InputNameAreas">Name Areas</label>
-        <input type="text" id="InputNameAreas" required>
+        <label for="InputIDAreas">ID Khu vực: </label>
+        <input type="text" id="InputIDAreas" placeholder="Nhập mã khu vực" required>
+        <div id="idError" style="color: red;"></div>
 
-        <label for="InputIDAreas">ID Areas</label>
-        <input type="text" id="InputIDAreas" required>
+        <label for="InputUrlImageAreas">Đường dẫn: </label>
+        <input type="text" id="InputUrlImageAreas" placeholder="Nhập đường dẫn hình ảnh minh họa của khu vực..." required>
+        <div id="urlError" style="color: red;"></div>
 
-        <button type="submit">Add New Areas</button><br><br>
+        <button type="submit">Thêm khu vực mới</button><br><br>
     </form>
 
+    <script>
+        const nameInput = document.getElementById('InputNameAreas');
+        const idInput = document.getElementById('InputIDAreas');
+        const urlInput = document.getElementById('InputUrlImageAreas');
 
-    <h1>List Areas</h1>
+        document.getElementById('addDataForm').addEventListener('submit', function (event) {
+            if (!nameInput.value.trim() || !idInput.value.trim() || !urlInput.value.trim()) {
+                event.preventDefault(); // Ngăn chặn việc submit form nếu có ô nhập trống
+                document.getElementById('nameError').innerText = !nameInput.value.trim() ? 'Vui lòng nhập tên khu vực.' : '';
+                document.getElementById('idError').innerText = !idInput.value.trim() ? 'Vui lòng nhập mã khu vực.' : '';
+                document.getElementById('urlError').innerText = !urlInput.value.trim() ? 'Vui lòng nhập đường dẫn hình ảnh.' : '';
+            } else {
+                document.getElementById('nameError').innerText = '';
+                document.getElementById('idError').innerText = '';
+                document.getElementById('urlError').innerText = '';
+            }
+
+            if (/\s/.test(idInput.value)) {
+                event.preventDefault(); // Ngăn chặn việc submit form nếu có khoảng trắng trong mã khu vực
+                document.getElementById('idError').innerText = 'Mã khu vực không được chứa khoảng trắng.';
+            }
+
+            if (/\s/.test(urlInput.value)) {
+                event.preventDefault(); // Ngăn chặn việc submit form nếu có khoảng trắng trong đường dẫn hình ảnh
+                document.getElementById('urlError').innerText = 'Đường dẫn hình ảnh minh họa không được chứa khoảng trắng.';
+            }
+        });
+    </script>
+
+
+
+
+    <h2>List Areas</h2>
     <table id="AreasTable">
         <thead>
             <tr>
                 <th>Code Areas </th>
                 <th>Name Areas</th>
                 <th>ID Areas</th>
-              
+
             </tr>
         </thead>
         <tbody></tbody>
     </table>
-    <div id="editAreasTable">
+    <div id="editAreasTable" style="display: none;">
         <input type="text" id="editCodeAreas" placeholder="Code Areas">
         <input type="text" id="editNameAreas" placeholder="Name Areas">
-        <input type="text" id="editIDAreas" placeholder="ID Areas">     
-        
+        <input type="text" id="editIDAreas" placeholder="ID Areas">
+
         <button id="saveChangesAreasBtn">SAVE</button>
     </div>
-    
+
     @* //Locations *@
-    
-    <table id="LocationsTable">
+
+    <table id="LocationsTable" style="display: none;">
+
         <thead>
+
             <tr>
                 <th>Code Location </th>
                 <th>Name Location</th>
@@ -82,24 +123,114 @@
         </thead>
         <tbody></tbody>
     </table>
+    <div id="editLocationTable" style="display: none;">
+        <input type="text" id="editCodeLocation" placeholder="Code Location">
+        <input type="text" id="editNameLocation" placeholder="Name Location">
+        <input type="text" id="editIDLocation" placeholder="ID Location">
+        <input type="text" id="editIDAreasLocation" placeholder="ID Areas">
+
+        <button id="saveChangesLocationBtn">SAVE</button>
+    </div>
 
     <form id="addLocationsForm">
-        <div id="AddLocationsTable">
+        <div id="AddLocationsTable" style="display: none;">
             <input type="text" id="InputIDLocations" placeholder="ID Locations">
             <input type="text" id="InputNameLocations" placeholder="Name Locations">
-            <input type="text" id="IDAreasOfLocations" placeholder="ID Areas Of Locations"> <!-- Sửa thành hidden để không hiển thị trên giao diện -->
+            <input type="text" id="IDAreasOfLocations" placeholder="ID Areas Of Locations">
 
+            <button type="submit">ADD</button>
+        </div>
+    </form>
+
+    @* //Scenes *@
+
+    <table id="ScenesTable" style="display: none;">
+
+        <thead>
+
+            <tr>
+                <th>Code Scene </th>
+                <th>ID Location</th>
+                <th>ID Scene</th>
+                <th>Title Scene</th>
+                <th>Url Scene</th>
+                <th>Vertical (Pitch)</th>
+                <th>Horizontal (Yaw)</th>
+
+
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <div id="editScenesTable" style="display: none;">
+        <input type="text" id="editCodeScenes" placeholder="Code Scenes">
+        <input type="text" id="editIDLocations" placeholder="ID Locations">
+        <input type="text" id="editIDScenes" placeholder="ID Scenes">
+        <input type="text" id="editTitle" placeholder="Title of next scenes">
+        <input type="text" id="editLink" placeholder="Url Scenes">
+        <input type="number" id="editPitch" placeholder="Vertical (Pitch)">
+        <input type="number" id="editYaw" placeholder="Horizontal (Yaw)">
+
+        <button id="saveChangesScenesBtn">SAVE</button>
+    </div>
+
+    <form id="addScenesForm">
+        <div id="AddScenesTable" style="display: none;">
+            <input type="text" id="InputIDLocationOfScene" placeholder="ID Location of Scene">
+            <input type="text" id="InputIDScene" placeholder="ID Scene">
+            <input type="text" id="InputTitleScene" placeholder="Title Scene">
+            <input type="text" id="InputURL" placeholder="Url Scene">
+
+            <input type="number" id="InputPitch" placeholder="Vertical (Pitch)">
+            <input type="number" id="InputYaw" placeholder="Horizontal (Yaw)">
+            <button type="submit">ADD</button>
+        </div>
+    </form>
+
+    @* //HotSpots *@
+
+    <table id="HotSpotsTable" style="display: none;">
+
+        <thead>
+
+            <tr>
+                <th>Code HotSpot </th>
+                <th>ID Scene Of HotSpot</th>
+                <th>ID Next Scene</th>
+                <th>Title HotSpot</th>
+                <th>Virtical (Pitch)</th>
+                <th>Horizontal (Yaw)</th>
+
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <div id="editHotSpotsTable" style="display: none;">
+        <input type="text" id="editCodeHotSpots" placeholder="Code HotSpot">
+        <input type="text" id="editScenesID" placeholder="Belong to id Scenes ">
+        <input type="text" id="editIDNextScenes" placeholder="Id next Scenes">
+        <input type="text" id="editText" placeholder="Title next Scenes">
+        <input type="number" id="editPitchHSP" placeholder="Vertical (Pitch)">
+        <input type="number" id="editYawHSP" placeholder="Horizontal (Yaw)">
+        <button id="saveChangesHotSpot">SAVE</button>
+    </div>
+
+    <form id="addHotSpotsForm">
+        <div id="AddHotSpotTable" style="display: none;">
+            <input type="text" id="InputIDSceneOfHotSpot" placeholder="ID Scene of HotSpot">
+            <input type="text" id="InputIDNextScene" placeholder="ID Next Scene">
+            <input type="text" id="InputTitleHotSpot" placeholder="Title HotSpot">
+            <input type="number" id="InputPitch" placeholder="Vertical (Pitch)">
+            <input type="number" id="InputYaw" placeholder="Horizontal (Yaw)">
             <button type="submit">ADD</button>
         </div>
     </form>
 
 
 
-    
 
 
 
-    
     <script src="~/js/AllManage.js"></script>
 </body>
 </html>

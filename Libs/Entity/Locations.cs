@@ -11,12 +11,13 @@ namespace Libs.Entity
 {
     public class Locations
     {
-        public Locations(Guid CodeLocations, string NameLocations, string IDLocations, string IDAreas)
+        public Locations(Guid CodeLocations, string NameLocations, string IDLocations, string IDAreas, string UrlImageLocations)
         {
             this.CodeLocations = CodeLocations;
             this.NameLocations = NameLocations;
             this.IDLocations = IDLocations;
             this.IDAreas=IDAreas;
+            this.UrlImageLocations = UrlImageLocations;
         }
         public Locations()
         {
@@ -24,6 +25,7 @@ namespace Libs.Entity
             this.NameLocations = string.Empty;
             this.IDLocations = string.Empty;
             this.IDAreas = string.Empty;
+            this.UrlImageLocations = string.Empty;
         }
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -31,6 +33,7 @@ namespace Libs.Entity
         public string NameLocations { get; set; }
         public string IDLocations { get; set; }
         public string IDAreas { get; set; }
-
+        
+        public string UrlImageLocations { get; set; }
     }
 }

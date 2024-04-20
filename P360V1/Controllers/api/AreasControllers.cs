@@ -24,14 +24,14 @@ namespace API.Controllers.api
         [Route("InsertAreas")]
         public IActionResult insertAreas(AreasModel areasModel)
         {
-            Areas areas = new Areas(); 
+            Areas areas = new Areas();
             areas.NameAreas = areasModel.NameAreas;
             areas.IDAreas = areasModel.IDAreas;
-
-
-                AreasService.insertAreas(areas);
-                return Ok(new { status = true, message = "INSERT SUCCESS" });
-            }
+            areas.UrlImageAreas = areasModel.UrlImageAreas;
+            areas.CodeAccount = areasModel.CodeAccount;
+            AreasService.insertAreas(areas);
+            return Ok(new { status = true, message = "INSERT SUCCESS" });
+        }
         [HttpGet]
         [Route("ListAreas")]
         public IActionResult GetAreas()
@@ -62,7 +62,8 @@ namespace API.Controllers.api
                 }
                 areas.IDAreas = areasModel.IDAreas;
                 areas.NameAreas = areasModel.NameAreas;
-              
+                areas.UrlImageAreas =areasModel.UrlImageAreas;
+
                 AreasService.updateAreas(areas);
                 return Ok(new { status = true, message = "Update success", data = areas });
             }
@@ -74,4 +75,4 @@ namespace API.Controllers.api
 
 
     }
-    }
+}

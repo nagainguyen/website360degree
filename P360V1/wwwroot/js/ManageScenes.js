@@ -1,13 +1,58 @@
-﻿const apiUrl = '/api/Scenes/ListScenes';
-let dataList;
+﻿document.addEventListener('DOMContentLoaded', function () {
+    const apiUrlScenes = '/api/Scenes/ListScenes';
+    const apiUrlLocations = '/api/Locations/ListLocations';
+    let dataListScenes;
+    let dataListLocations;
 
-document.addEventListener('DOMContentLoaded', function () {
-    getScenesAndDisplay();
+    async function getScenesAndDisplay() {
+        try {
+            const responseScenes = await fetch(apiUrlScenes);
+            if (!responseScenes.ok) {
+                throw new Error(`ERROR WHEN RETRIEVING SCENES! ${responseScenes.status} - ${responseScenes.statusText}`);
+            }
+            const { data } = await responseScenes.json();
+            dataListScenes = data;
+            displayImages(dataListScenes);
+        } catch (error) {
+            console.error('ERROR WHEN RETRIEVING SCENES!', error);
+        }
+    }
+
+    async function getLocationAndDisplay() {
+        try {
+            const responseLocations = await fetch(apiUrlLocations);
+            if (!responseLocations.ok) {
+                throw new Error(`ERROR WHEN RETRIEVING LOCATIONS! ${responseLocations.status} - ${responseLocations.statusText}`);
+            }
+            const { data } = await responseLocations.json();
+            dataListLocations = data;
+        } catch (error) {
+            console.error('ERROR WHEN RETRIEVING LOCATIONS!', error);
+        }
+    }
+
+    async function checkScenesExistence(IDScenes) {
+        try {
+            const existingScenes = dataListScenes.find(scene => scene.IDScenes === IDScenes);
+            return !!existingScenes;
+        } catch (error) {
+            console.error('ERROR WHEN CHECKING SCENES EXISTENCE!', error);
+            return false;
+        }
+    }
+
+    async function checkLocationExistence(IDLocation) {
+        try {
+            const existingLocation = dataListLocations.find(location => location.IDLocation === IDLocation);
+            return !!existingLocation;
+        } catch (error) {
+            console.error('ERROR WHEN CHECKING LOCATION EXISTENCE!', error);
+            return false;
+        }
+    }
 
     document.getElementById('addDataForm').addEventListener('submit', async function (e) {
         e.preventDefault();
-
-        const url = window.location.origin + '/api/Scenes/InsertScenes';
 
         const idLocations = document.getElementById('InputIDLocations').value;
         const idScenes = document.getElementById('InputIDScenes').value;
@@ -15,6 +60,25 @@ document.addEventListener('DOMContentLoaded', function () {
         const urlScenes = document.getElementById('InputURL').value;
         const pitchScenes = parseFloat(document.getElementById('InputPitch').value);
         const yawScenes = parseFloat(document.getElementById('InputYaw').value);
+
+        if (!idLocations || !idScenes || !titleScenes || !urlScenes || isNaN(pitchScenes) || isNaN(yawScenes)) {
+            alert('Please fill in all fields.');
+            return;
+        }
+
+        const isScenesExisting = await checkScenesExistence(idScenes);
+        if (isScenesExisting) {
+            alert('IDScenes already exists. Please enter a different IDScenes.');
+            return;
+        }
+
+        const isLocationExisting = await checkLocationExistence(idLocations);
+        if (!isLocationExisting) {
+            alert('IDLocation does not exist. Please enter a valid IDLocation.');
+            return;
+        }
+
+        const url = window.location.origin + '/api/Scenes/InsertScenes';
 
         const dataToPost = {
             IDLocations: idLocations,
@@ -54,157 +118,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 
-    async function getScenesAndDisplay() {
-        try {
-            const response = await fetch(apiUrl);
-            if (!response.ok) {
-                throw new Error(`ERROR WHEN RETRIEVING DATA! ${response.status} - ${response.statusText}`);
-            }
-            const { data } = await response.json();
-            console.log(data);
-            dataList = data.map(item => ({
-                codeScenes: item.codeScenes,
-                idLocations: item.idLocations,
-                idScenes: item.idScenes,
-                title: item.titleScenes,
-                urlScenes: item.urlScenes,
-                pitch: item.pitchScenes,
-                yaw: item.yawScenes
-            }));
-
-            displayImages(dataList);
-            console.log(dataList);
-        } catch (error) {
-            console.error('ERROR WHEN RETRIEVING DATA!', error);
-        }
-    }
-
-    function displayImages(dataList) {
-        const tableBody = document.querySelector('#ImageTable tbody');
-        tableBody.innerHTML = '';
-
-        dataList.forEach(data => {
-            const row = document.createElement('tr');
-            row.innerHTML = `
-                <td>${data.codeScenes}</td>
-                <td>${data.idLocations}</td>
-                <td>${data.idScenes}</td>
-                <td>${data.title}</td>
-                <td>${data.urlScenes}</td>
-                <td>${data.pitch}</td>
-                <td>${data.yaw}</td>
-                <td>
-                    <button onclick="editScenes('${data.codeScenes}')">UPDATE</button>
-                    <button onclick="confirmDelete('${data.codeScenes}')">DELETE</button>
-                </td>
-            `;
-            tableBody.appendChild(row);
-        });
-    }
-
-    window.confirmDelete = function (codeScenes) {
-        const shouldDelete = confirm('You want to delete this scenes?');
-        if (shouldDelete) {
-            console.log('Code Delete:', codeScenes);
-            deleteScenes(codeScenes);
-        }
-    };
-
-    async function deleteScenes(codeScenes) {
-        console.log('code of deleteImage:', codeScenes);
-        const deleteUrl = `/api/Scenes/DeleteScenes?codeScenes=${codeScenes}`;
-
-        try {
-            const response = await fetch(deleteUrl, {
-                method: 'DELETE',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-            });
-
-            if (!response.ok) {
-                throw new Error(`ERROR DELETE: ${response.status} - ${response.statusText}`);
-            }
-
-            getScenesAndDisplay();
-        } catch (error) {
-            console.error('SERVER IS NOT RESPONDING!', error);
-        }
-    }
-
-    window.editScenes = function (codeScenes) {
-        openEditModal(codeScenes);
-    };
-
-    function openEditModal(codeScenes) {
-        const editModal = document.getElementById('editTable');
-        if (editModal.style.display === 'none') {
-            editModal.style.display = 'table';
-        } else {
-            editModal.style.display = 'none';
-        }
-
-        const dataEdit = dataList.find(item => item.codeScenes === codeScenes);
-        document.getElementById('editCodeScenes').value = dataEdit.codeScenes;
-        document.getElementById('editIDLocations').value = dataEdit.idLocations;
-        document.getElementById('editIDScenes').value = dataEdit.idScenes;
-        document.getElementById('editTitle').value = dataEdit.title;
-        document.getElementById('editLink').value = dataEdit.urlScenes;
-        document.getElementById('editPitch').value = dataEdit.pitch;
-        document.getElementById('editYaw').value = dataEdit.yaw;
-        console.log('data edit');
-        console.log(dataEdit);
-    }
-
-    document.getElementById('saveChangesBtn').addEventListener('click', saveChanges);
-
-    function saveChanges() {
-        const editedCodeScenes = document.getElementById('editCodeScenes').value;
-        const editedIDLocations = document.getElementById('editIDLocations').value;
-        const editedIDScenes = document.getElementById('editIDScenes').value;
-        const editedTitle = document.getElementById('editTitle').value;
-        const editedLink = document.getElementById('editLink').value;
-        const editedPitch = parseFloat(document.getElementById('editPitch').value);
-        const editedYaw = parseFloat(document.getElementById('editYaw').value);
-        console.log('data save');
-        const updateUrl = `/api/Scenes/UpdateScenes`;
-
-        const dataToUpdate = {
-            codeScenes: editedCodeScenes,
-            idLocations: editedIDLocations,
-            idScenes: editedIDScenes,
-            titleScenes: editedTitle,
-            urlScenes: editedLink,
-            pitchScenes: editedPitch,
-            yawScenes: editedYaw
-        };
-        console.log("data update");
-        console.log(dataToUpdate);
-        fetch(updateUrl, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(dataToUpdate),
-        })
-            .then(response => {
-                if (response.ok) {
-                    console.log('SUCCESS');
-                    alert('SUCCESS!');
-                    closeEditModal();
-                    getScenesAndDisplay();
-                } else {
-                    console.error('FAIL');
-                    alert('ERROR!');
-                }
-            })
-            .catch(error => {
-                console.error('SERVER IS NOT RESPONDING!', error);
-            });
-    }
-
-    function closeEditModal() {
-        const editTable = document.getElementById('editTable');
-        editTable.style.display = 'none';
-    }
+    // Gọi hàm để lấy và hiển thị Scenes và Locations khi trang được load
+    getScenesAndDisplay();
+    getLocationAndDisplay();
 });

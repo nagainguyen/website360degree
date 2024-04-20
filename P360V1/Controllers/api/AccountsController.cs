@@ -1,6 +1,9 @@
 ﻿using Libs.Entity;
 using Libs.Service;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using static System.Net.Mime.MediaTypeNames;
 
@@ -10,71 +13,90 @@ namespace API.Controllers.api
     [ApiController]
     public class AccountsController : ControllerBase
     {
-        private LoginsService loginsService;
+        private AccountsService accountsService;
 
-        public AccountsController(LoginsService loginsService)
+        public AccountsController(AccountsService accountsService)
         {
-            this.loginsService = loginsService;
+            this.accountsService = accountsService;
         }
 
         [HttpPost]
         [Route("InsertAccount")]
-        public IActionResult insertAccount(LoginsModel loginsModel)
+        public IActionResult insertAccount(AccountsModel accountsModel)
         {
-            Logins logins = new Logins();
+            Accounts accounts = new Accounts();
 
-            logins.NameAccount = loginsModel.NameAccount;
-            logins.Password = loginsModel.Password;
+            accounts.Email = accountsModel.Email;
+            accounts.NameAccount = accountsModel.NameAccount;
+            accounts.Password = accountsModel.Password;
+            accounts.Status = accountsModel.Status;
 
 
-            loginsService.insertLogins(logins);
+            accountsService.insertAccounts(accounts);
             return Ok(new { status = true, message = "INSERT SUCCESS" });
         }
-
         [HttpPost]
         [Route("LoginsAccount")]
-        public IActionResult loginAccount(LoginsModel loginsModel)
+        public IActionResult LoginAccount(AccountsModel accountsModel)
         {
-            Logins logins = loginsService.GetAccount(loginsModel.NameAccount);
-            if (logins != null && logins.Password.Equals(loginsModel.Password))
+            Accounts accounts = accountsService.GetAccountsByEmail(accountsModel.Email);
+            if (accounts != null && accounts.Password.Equals(accountsModel.Password))
             {
-                return Ok(new { status = true, message =   "" });
+                //HttpContext.Session.SetString("FullName", accounts.NameAccount);
+                //HttpContext.Session.SetString("Email", accounts.Email);
+          
+                return Ok(new
+                {
+                    status = true,
+                    message = "Login successful",
+                    
+                   
+                });
             }
             else
             {
-                return RedirectToAction("Logins");
+                return BadRequest(new
+                {
+                    status = false,
+                    message = "Invalid email or password"
+                });
             }
         }
+
 
         [HttpGet]
         [Route("ListAccount")]
         public IActionResult GetListAccount()
         {
 
-            List<Logins> listAccount = loginsService.GetListAccounts();
+            List<Accounts> listAccount = accountsService.GetListAccounts();
             return Ok(new { status = true, message = "SUCCESS", data = listAccount });
         }
 
         [HttpPost]
         [Route("DeleteAccount")]
-        public IActionResult deleteAccount(LoginsModel loginsModel)
+        public IActionResult deleteAccount(Guid Code)
         {
-            loginsService.deleteLogins(loginsModel.NameAccount);
+            accountsService.deleteAccounts(Code);
             return Ok(new { status = true, message = "DELETE SUCCESS" });
         }
 
         [HttpPost]
         [Route("UpdateAccount")]
-        public IActionResult updateAccount(LoginsModel loginsModel)
+        public IActionResult updateAccount(AccountsModel accountsModel)
         {
-            Logins logins = loginsService.GetAccount(loginsModel.NameAccount);
-            logins.NameAccount = logins.NameAccount ;
-            logins.Password = loginsModel.Password;
-
+            Accounts accounts = accountsService.GetAccountsByCode(accountsModel.CodeAccount);
+            accounts.Email = accounts.Email;
+            accounts.NameAccount = accounts.NameAccount ;
+            accounts.Password = accounts.Password;
+            accounts.Status = accounts.Status;
+            
             Ok(new { status = true, });
-            loginsService.updateLogin(logins);
-            return Ok(new { status = true, message = "UPDATE SUCCESS", data = logins });
+            accountsService.updateAccounts(accounts);
+            return Ok(new { status = true, message = "UPDATE SUCCESS", data = accounts });
 
         }
+        
+
     }
 }

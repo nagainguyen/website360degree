@@ -27,7 +27,7 @@ namespace API.Controllers.api
             locations.NameLocations = locationsModel.NameLocations;
             locations.IDLocations = locationsModel.IDLocations;
             locations.IDAreas = locationsModel.IDAreas;
-
+            locations.UrlImageLocations = locationsModel.UrlImageLocations;
 
             locationsService.insertLocations(locations);
             return Ok(new { status = true, message = "INSERT SUCCESS" });
@@ -42,12 +42,14 @@ namespace API.Controllers.api
             return Ok(new { status = true, message = "SUCCESS", data = ListLocations });
         }
 
-        [HttpPost]
+        [HttpDelete]
         [Route("DeleteLocations")]
-        public IActionResult deleteLocations(LocationsModel khuvucsModel)
+        public IActionResult deleteLocations(Guid codeLocations)
         {
-            locationsService.deleteLocationByCode(khuvucsModel.CodeLocations);
+            locationsService.deleteLocationByCode(codeLocations);
             return Ok(new { status = true, message = "DELETE SUCCESS" });
+
+           
         }
 
         [HttpPost]
@@ -59,6 +61,7 @@ namespace API.Controllers.api
             locations.NameLocations = locationsModel.NameLocations;
             locations.IDLocations = locationsModel.IDLocations;
             locations.IDAreas = locationsModel.IDAreas;
+            locations.UrlImageLocations = locationsModel.UrlImageLocations;
 
             Ok(new { status = true, });
             locationsService.updateLocations(locations);

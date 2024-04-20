@@ -1,0 +1,218 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+    // if (!User.Identity.IsAuthenticated)
+    // {
+    //     // Lấy ra HttpContext
+    //     var httpContext = Context.Request.HttpContext;
+
+    //     // Thực hiện chuyển hướng đến trang đăng nhập
+    //     httpContext.Response.Redirect("/Account/Logins");
+    // }
+}
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MANAGE SCENES</title>
+<link rel="stylesheet" type="text/css" href="~/css/Styles_options.css" />
+<base href="/">
+<style>
+    button {
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+        border: none;
+        border-radius: 10px;
+    }
+
+        button:hover {
+            background-color: #008CBA;
+            color: white;
+            transform: scale(1.1);
+        }
+
+    h1 {
+        font-size: 27px;
+        font-family: Arial;
+        color: black;
+    }
+
+    #editTable {
+        display: none;
+    }</style>
+<
+<h1>QUẢN LÝ DỮ LIỆU</h1>
+<h2>Quản lý các khu vực</h2>
+@*//Areas*@
+<form id="addDataForm">
+    <label for="InputNameAreas">Tên khu vực: </label>
+    <input type="text" id="InputNameAreas" placeholder="Nhập tên khu vực" required>
+    <div id="nameError" style="color: red;"></div>
+
+    <label for="InputIDAreas">Mã Khu vực: </label>
+    <input type="text" id="InputIDAreas" placeholder="Nhập mã khu vực" required>
+    <div id="idError" style="color: red;"></div>
+
+    <label for="InputUrlImageAreas">Đường dẫn: </label>
+    <input type="text" id="InputUrlImageAreas" placeholder="Nhập đường dẫn hình ảnh minh họa của khu vực..." required>
+    <div id="urlError" style="color: red;"></div>
+
+    <button type="submit">Thêm khu vực mới</button><br><br>
+</form>
+
+
+
+
+
+<h2>Danh sách chi tiết thông tin các khu vực</h2>
+<table id="AreasTable">
+    <thead>
+        <tr>
+            <th>Mã gốc khu vực </th>
+            <th>Tên khu vực</th>
+            <th>Mã khu vực</th>
+            <th>Đường dẫn hình ảnh</th>
+            <th></th>
+
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+<div id="editAreasTable" style="display: none;">
+    <input type="text" id="editCodeAreas" placeholder="Mã góc khu vực">
+    <input type="text" id="editNameAreas" placeholder="Tên khu vực">
+   
+    <input type="text" id="editIDAreas" placeholder="Mã khu vực">
+    <input type="text" id="editUrlInageAreas" placeholder="ĐƯờng dẫn minh họa của khu vực... ">
+
+    <button id="saveChangesAreasBtn">SAVE</button>
+</div>
+
+@* //Locations *@
+
+<table id="LocationsTable" style="display: none;">
+
+    <thead>
+
+        <tr>
+            <th>Code Location </th>
+            <th>Name Location</th>
+            <th>ID Location</th>
+            <th>ID Areas</th>
+
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+<div id="editLocationTable" style="display: none;">
+    <input type="text" id="editCodeLocation" placeholder="Code Location">
+    <input type="text" id="editNameLocation" placeholder="Name Location">
+    <input type="text" id="editIDLocation" placeholder="ID Location">
+    <input type="text" id="editIDAreasLocation" placeholder="ID Areas">
+
+    <button id="saveChangesLocationBtn">SAVE</button>
+</div>
+
+<form id="addLocationsForm">
+    <div id="AddLocationsTable" style="display: none;">
+        <input type="text" id="InputIDLocations" placeholder="ID Locations">
+        <input type="text" id="InputNameLocations" placeholder="Name Locations">
+        <input type="text" id="IDAreasOfLocations" placeholder="ID Areas Of Locations">
+
+        <button type="submit">ADD</button>
+    </div>
+</form>
+
+@* //Scenes *@
+
+<table id="ScenesTable" style="display: none;">
+
+    <thead>
+
+        <tr>
+            <th>Code Scene </th>
+            <th>ID Location</th>
+            <th>ID Scene</th>
+            <th>Title Scene</th>
+            <th>Url Scene</th>
+            <th>Vertical (Pitch)</th>
+            <th>Horizontal (Yaw)</th>
+
+
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+<div id="editScenesTable" style="display: none;">
+    <input type="text" id="editCodeScenes" placeholder="Code Scenes">
+    <input type="text" id="editIDLocations" placeholder="ID Locations">
+    <input type="text" id="editIDScenes" placeholder="ID Scenes">
+    <input type="text" id="editTitle" placeholder="Title of next scenes">
+    <input type="text" id="editLink" placeholder="Url Scenes">
+    <input type="number" id="editPitch" placeholder="Vertical (Pitch)">
+    <input type="number" id="editYaw" placeholder="Horizontal (Yaw)">
+
+    <button id="saveChangesScenesBtn">SAVE</button>
+</div>
+
+<form id="addScenesForm">
+    <div id="AddScenesTable" style="display: none;">
+        <input type="text" id="InputIDLocationOfScene" placeholder="ID Location of Scene">
+        <input type="text" id="InputIDScene" placeholder="ID Scene">
+        <input type="text" id="InputTitleScene" placeholder="Title Scene">
+        <input type="text" id="InputURL" placeholder="Url Scene">
+
+        <input type="number" id="InputPitch" placeholder="Vertical (Pitch)">
+        <input type="number" id="InputYaw" placeholder="Horizontal (Yaw)">
+        <button type="submit">ADD</button>
+    </div>
+</form>
+
+@* //HotSpots *@
+
+<table id="HotSpotsTable" style="display: none;">
+
+    <thead>
+
+        <tr>
+            <th>Code HotSpot </th>
+            <th>ID Scene Of HotSpot</th>
+            <th>ID Next Scene</th>
+            <th>Title HotSpot</th>
+            <th>Virtical (Pitch)</th>
+            <th>Horizontal (Yaw)</th>
+
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+<div id="editHotSpotsTable" style="display: none;">
+    <input type="text" id="editCodeHotSpots" placeholder="Code HotSpot">
+    <input type="text" id="editScenesID" placeholder="Belong to id Scenes ">
+    <input type="text" id="editIDNextScenes" placeholder="Id next Scenes">
+    <input type="text" id="editText" placeholder="Title next Scenes">
+    <input type="number" id="editPitchHSP" placeholder="Vertical (Pitch)">
+    <input type="number" id="editYawHSP" placeholder="Horizontal (Yaw)">
+    <button id="saveChangesHotSpot">SAVE</button>
+</div>
+
+<form id="addHotSpotsForm">
+    <div id="AddHotSpotTable" style="display: none;">
+        <input type="text" id="InputIDSceneOfHotSpot" placeholder="ID Scene of HotSpot">
+        <input type="text" id="InputIDNextScene" placeholder="ID Next Scene">
+        <input type="text" id="InputTitleHotSpot" placeholder="Title HotSpot">
+        <input type="number" id="InputPitch" placeholder="Vertical (Pitch)">
+        <input type="number" id="InputYaw" placeholder="Horizontal (Yaw)">
+        <button type="submit">ADD</button>
+    </div>
+</form>
+
+
+
+
+
+
+<script src="~/js/AllManage.js"></script>
+
+
+
+

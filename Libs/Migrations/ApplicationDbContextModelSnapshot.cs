@@ -22,17 +22,52 @@ namespace Libs.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("Libs.Entity.Accounts", b =>
+                {
+                    b.Property<Guid>("CodeAccount")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("NameAccount")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("CodeAccount");
+
+                    b.ToTable("Accounts");
+                });
+
             modelBuilder.Entity("Libs.Entity.Areas", b =>
                 {
                     b.Property<Guid>("CodeAreas")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<string>("CodeAccount")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("IDAreas")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NameAreas")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UrlImageAreas")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
@@ -88,28 +123,13 @@ namespace Libs.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("UrlImageLocations")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("CodeLocations");
 
                     b.ToTable("Locations");
-                });
-
-            modelBuilder.Entity("Libs.Entity.Logins", b =>
-                {
-                    b.Property<Guid>("CodeAccount")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("uniqueidentifier");
-
-                    b.Property<string>("NameAccount")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("CodeAccount");
-
-                    b.ToTable("Logins");
                 });
 
             modelBuilder.Entity("Libs.Entity.Scenes", b =>

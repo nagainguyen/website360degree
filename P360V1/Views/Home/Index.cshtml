@@ -1,152 +1,12 @@
 ﻿@{
-    ViewData["Title"] = "Website manage view scenes 360 degree";
-    // Layout = "~/Views/Shared/_Layout.csshtml";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css" />
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-@* <link rel="stylesheet" type="text/css" href="~/css/Style.css" />
-<link rel="stylesheet" type="text/css" href="~/css/index.css" /> *@
+@* <link rel="stylesheet" type="text/css" href="~/css/Style.css" /> *@
+<link rel="stylesheet" type="text/css" href="~/css/index.css" />
 <script src="~/js/index.js"></script>
-<style>
-    
-body {
-    background-color: #e1e8f2;
-    font-family: 'Arial', sans-serif;
-}
-
-header {
-    background-color: #e1e8f2;
-    padding: 15px 0;
-    box-shadow: 0 4px 2px -2px gray;
-}
-
-.navbar {
-    background-color: #e1e8f2;
-}
-
-.footer {
-    padding: 1rem 0;
-    background-color: #e1e8f2;
-}
-
-.container {
-    display: flex;
-}
-
-#panorama-container {
-    width: 1200px;
-    height: 670px;
-    margin-left: auto;
-    margin-right: auto;
-    flex: 1;
-    position: relative;
-}
-
-
-#hotspotForm {
-    display: none;
-    position: fixed;
-    top: 180px;
-    right: 50px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 50px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
-    z-index: 999;
-}
-
-#scencesForm {
-    display: none;
-    position: fixed;
-    top: 180px;
-    left: 50px;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    padding: 50px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: width 0.3s ease-in-out, height 0.3s ease-in-out;
-    z-index: 999;
-}
-
-
-#controls {
-    position: absolute;
-    bottom: 0;
-    z-index: 2;
-    text-align: center;
-    width: 100%;
-    padding-bottom: 3px;
-}
-
-.ctrl {
-    padding: 8px 5px;
-    width: 30px;
-    text-align: center;
-    background: #e5d8e8;
-    display: inline-block;
-    cursor: pointer;
-}
-
-    .ctrl:hover {
-        background: rgba(33, 150, 243, 0.8);
-    }
-
-/* CSS cho form */
-
-.form {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-    .form-group label {
-        font-weight: bold;
-    }
-
-    .form-group input[type="text"],
-    .form-group input[type="number"],
-    .form-group input[type="file"] {
-        padding: 8px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
-
-    .form-group button[type="submit"] {
-        padding: 10px;
-        background-color: #007bff;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s ease-in-out;
-    }
-
-        .form-group button[type="submit"]:hover {
-            background-color: #0056b3;
-        }
-
-/* CSS cho nút đóng form */
-.close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    cursor: pointer;
-    font-size: 24px;
-    color: #aaa;
-}
-
-    .close-button:hover {
-        color: #555;
-    }
-
-
-
-</style>
 
 <div class="jumbotron" style="background-color: #e1e8f2">
     <br />
@@ -226,5 +86,3 @@ header {
         <button type="submit">ADD NEW SCENES</button>
     </form>
 </div>
-
-

@@ -1,0 +1,166 @@
+﻿@{
+    Layout = "~/Views/Shared/_LayoutLogins.cshtml";
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>SB Admin 2 - Register</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="~/Theme/Admin/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="~/Theme/Admin/css/sb-admin-2.min.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-gradient-primary">
+
+    <div class="container">
+
+        <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card-body p-0">
+                <!-- Nested Row within Card Body -->
+                <div class="row">
+                    <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+                    <div class="col-lg-7">
+                        <div class="p-5">
+                            <div class="text-center">
+                                <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
+                            </div>
+                            <form class="user">
+
+                                <div class="form-group row">
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control form-control-user" id="LastName"
+                                               placeholder="Họ">
+                                    </div>
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="text" class="form-control form-control-user" id="FirstName"
+                                               placeholder="Tên">
+                                    </div>
+
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" class="form-control form-control-user" id="InputEmail"
+                                           placeholder="Nhập Email">
+                                </div>
+                                <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="password" class="form-control form-control-user"
+                                               id="InputPassword" placeholder="Mật khẩu ">
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <input type="password" class="form-control form-control-user"
+                                               id="RepeatPassword" placeholder="Nhập lại mật khẩu">
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-user btn-block">
+                                    Đăng ký tài khoản
+                                </button>
+                                <hr>
+                                <a href="" class="btn btn-google btn-user btn-block">
+                                    <i class="fab fa-google fa-fw"></i> Đăng ký với Google
+                                </a>
+                                <a href="" class="btn btn-facebook btn-user btn-block">
+                                    <i class="fab fa-facebook-f fa-fw"></i> Đăng ký Facebook
+                                </a>
+                            </form>
+                            <hr>
+                            <div class="text-center">
+                                <a class="small" href="forgot-password.html">Quên mật Khẩu?</a>
+                            </div>
+                            <div class="text-center">
+                                <a class="small" href="Logins">Bạn đã có tài khoản? Đăng nhập!</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const url = '/api/Accounts/InsertAccount';
+            const form = document.querySelector('.user');
+            const lastNameInput = document.getElementById('LastName');
+            const firstNameInput = document.getElementById('FirstName');
+            const emailInput = document.getElementById('InputEmail');
+            const passwordInput = document.getElementById('InputPassword');
+            const repeatPasswordInput = document.getElementById('RepeatPassword');
+            const Status = "Admin";
+            form.addEventListener('submit', function (event) {
+                // Kiểm tra xem các ô nhập có đầy đủ không
+                event.preventDefault();
+                const lastName = lastNameInput.value;
+                const firstName = firstNameInput.value;
+                const email = emailInput.value;
+                const password = passwordInput.value;
+                const repeatPassword = repeatPasswordInput.value;
+                if (!lastNameInput.value || !firstNameInput.value || !emailInput.value || !passwordInput.value || !repeatPasswordInput.value) {
+                    // Nếu có ô nhập còn trống, ngăn chặn việc gửi form đi và hiển thị thông báo
+                    event.preventDefault();
+                    alert('Vui lòng điền đầy đủ thông tin.');
+                    return;
+                }
+                if (passwordInput.value !== repeatPasswordInput.value) {
+                    // Kiểm tra xem mật khẩu và mật khẩu nhập lại có khớp không
+                    event.preventDefault();
+                    alert('Mật khẩu nhập lại không khớp.');
+                    return;
+                }
+                // Gửi dữ liệu đăng ký tài khoản qua API
+                const data = {
+                    NameAccount: firstName + " " + lastName,
+                    Email: email,
+                    Password: password,
+                    Status: Status
+                };
+                console.log('data insert:', data);
+                fetch(url, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.status === true) {
+                            alert('Tạo tài khoản thành công!');
+                            window.location.href = "/Account/Logins";
+                        } else {
+                            alert('Tạo tài khoản không thành công!');
+                        }
+                    })
+                    .catch(error => {
+                        console.error('Error:', error);
+                    });
+
+            });
+        });
+    </script>
+    <!-- Bootstrap core JavaScript-->
+    <script src="~/Theme/Admin/vendor/jquery/jquery.min.js"></script>
+    <script src="~/Theme/Admin/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="~/Theme/Admin/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="~/Theme/Admin/js/sb-admin-2.min.js"></script>
+
+</body>
+
+</html>

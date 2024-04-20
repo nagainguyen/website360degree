@@ -62,7 +62,7 @@ header {
     .ctrl:hover {
         background: rgba(33, 150, 243, 0.8);
     }
-/*
+
 #hotspotForm {
     display: none;
     position: fixed;
@@ -170,4 +170,4 @@ header {
 
 #addHotspotForm button[type="submit"]:hover {
     background-color: #0056b3;
-}*/
+}

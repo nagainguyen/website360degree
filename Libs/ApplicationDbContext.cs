@@ -10,7 +10,7 @@ namespace Libs
         
         public DbSet<Scenes> Scenes { get; set; }
         public DbSet<HotSpots> HotSpots { get; set; }
-        public DbSet<Logins> Logins { get; set; }
+        public DbSet<Accounts> Accounts { get; set; }
         public DbSet<Locations> Locations { get; set; }
         public DbSet<Areas> Areas { get; set; }
         

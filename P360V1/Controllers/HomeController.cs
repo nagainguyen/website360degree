@@ -18,7 +18,11 @@ namespace PROJECT360.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult ViewAbout()
+        {
+            return View();
+        }
+        public IActionResult Contact()
         {
             return View();
         }
@@ -35,6 +39,19 @@ namespace PROJECT360.Controllers
         public IActionResult Options_AllManage()
         {
             return View();
+        }
+        public IActionResult Error(int? statusCode = null)
+        {
+            if (statusCode.HasValue)
+            {
+                if (statusCode.Value == 404)
+                {
+                    return View("NotFound");
+                }
+              
+            }
+
+            return View("Error"); 
         }
 
 
