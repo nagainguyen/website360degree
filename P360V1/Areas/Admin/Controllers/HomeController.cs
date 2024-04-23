@@ -32,5 +32,11 @@ namespace Main.Areas.Admin.Controllers
         {
             return View();
         }
+
+        [Area("Admin")]
+        public IActionResult Manage_Account()
+        {
+            return View();
+        }
     }
 }

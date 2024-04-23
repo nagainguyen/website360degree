@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "DAyI61ofmSagMSI3bkhmQd3I1euQ3N8JzTGw0XEZzZM=",
+  "Hash": "bk4jOaFf63R7rsPxzo9ajvMoiJvnO1qQQ7CSrN7b6Qg=",
   "Source": "Main",
   "BasePath": "_content/Main",
   "Mode": "Default",
@@ -737,6 +737,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\index.js"
+    },
+    {
+      "Identity": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\js\\ManageAccounts.js",
+      "SourceId": "Main",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\",
+      "BasePath": "_content/Main",
+      "RelativePath": "js/ManageAccounts.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\ManageAccounts.js"
     },
     {
       "Identity": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\js\\ManageAreas.js",

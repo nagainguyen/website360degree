@@ -73,30 +73,35 @@ namespace API.Controllers.api
             return Ok(new { status = true, message = "SUCCESS", data = listAccount });
         }
 
-        [HttpPost]
-        [Route("DeleteAccount")]
-        public IActionResult deleteAccount(Guid Code)
-        {
-            accountsService.deleteAccounts(Code);
-            return Ok(new { status = true, message = "DELETE SUCCESS" });
-        }
 
         [HttpPost]
         [Route("UpdateAccount")]
         public IActionResult updateAccount(AccountsModel accountsModel)
         {
-            Accounts accounts = accountsService.GetAccountsByCode(accountsModel.CodeAccount);
-            accounts.Email = accounts.Email;
-            accounts.NameAccount = accounts.NameAccount ;
-            accounts.Password = accounts.Password;
-            accounts.Status = accounts.Status;
-            
-            Ok(new { status = true, });
-            accountsService.updateAccounts(accounts);
-            return Ok(new { status = true, message = "UPDATE SUCCESS", data = accounts });
-
-        }
+            Accounts accounts = accountsService.GetAccountsByCode(accountsModel.CodeAccount);      
+            if (accounts == null)
+            {
+                return NotFound(); 
+            }
         
+            accounts.Email = accountsModel.Email;
+            accounts.NameAccount = accountsModel.NameAccount;
+            accounts.Password = accountsModel.Password;
+            accounts.Status = accountsModel.Status;
+
+            accountsService.updateAccounts(accounts);
+
+            return Ok(new { status = true, message = "UPDATE SUCCESS", data = accounts });
+        }
+
+
+        [HttpDelete]
+        [Route("DeleteAccount")]
+        public IActionResult DeleteAccount(Guid CodeAccount)
+        {
+            accountsService.deleteAccounts(CodeAccount);
+            return Ok(new { status = true, message = "DELETE SUCCESS" });
+        }
 
     }
 }
