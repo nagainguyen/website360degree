@@ -1,0 +1,105 @@
+﻿@{
+    ViewData["Title"] = "Manage_Scenes";
+    Layout = "~/Areas/Manager/Views/Shared/_LayoutManager.cshtml";
+}
+
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MANAGE SCENES</title>
+<link rel="stylesheet" type="text/css" href="~/css/Styles_options.css" />
+<base href="/">
+<style>
+    button {
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+        border: none;
+        border-radius: 10px;
+    }
+
+        button:hover {
+            background-color: #008CBA;
+            color: white;
+            transform: scale(1.1);
+        }
+
+    h1 {
+        font-size: 27px;
+        font-family: Arial;
+        color: black;
+    }
+
+    #editTable {
+        display: none;
+    }</style>
+
+
+<h1>QUẢN LÝ THÔNG TIN CẢNH</h1>
+<h2>Thêm cảnh mới</h2>
+<form id="addDataForm">
+
+    <label for="InputIDLocations">Mã địa điểm</label>
+    <input type="text" id="InputIDLocations" 
+            required oninvalid="this.setCustomValidity('Vui lòng nhập mã của địa điểm chứa cảnh hiện tại!')"
+            oninput="this.setCustomValidity('')" />
+
+    <label for="InputIDScenes">Mã cảnh</label>
+    <input type="text" id="InputIDScenes" 
+            required oninvalid="this.setCustomValidity('Vui lòng nhập giá mã của cảnh !')"
+            oninput="this.setCustomValidity('')" />
+
+    <label for="InputTitle">Thông tin mô tả</label>
+    <input type="text" id="InputTitle" 
+            required oninvalid="this.setCustomValidity('Vui lòng nhập thông tin mô tả của cảnh !')"
+            oninput="this.setCustomValidity('')" />
+
+    <label for="InputURL">Đường dẫn hình ảnh: </label>
+    <input type="text" id="InputURL" 
+            required oninvalid="this.setCustomValidity('Vui lòng nhập đường dẫn hình ảnh của cảnh!')"
+            oninput="this.setCustomValidity('')" />
+
+
+    <label for="InputPitch">Góc nhìn dọc (Pitch)</></label>
+    <input type="number" step="0.1" id="InputPitch"
+            required oninvalid="this.setCustomValidity('Vui lòng nhập giá trị cho Vertical (Pitch) !')"
+            oninput="this.setCustomValidity('')" />
+
+    <label for="InputYaw">Góc nhìn ngang (Yaw)</label>
+    <input type="number" step="0.1" id="InputYaw" 
+            required oninvalid="this.setCustomValidity('Vui lòng nhập giá trị cho Horizontal (Yaw) !')" 
+            oninput="this.setCustomValidity('')" />
+
+
+    <button type="submit">Thêm cảnh mới</button><br><br>
+</form>
+
+
+<h2>Danh sách cảnh</h2>
+<table id="ImageTable">
+    <thead>
+        <tr>
+            <th>Mã gốc của cảnh </th>
+            <th>Mã địa điểm</th>
+            <th>Mã cảnh</th>
+            <th>Mô tả</th>
+            <th>Đường dẫn hình ảnh</th>
+            <th>Góc nhìn dọc (Pitch)</th>
+            <th>Góc nhìn ngang (Yaw)</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+<div id="editTable">
+    <input type="text" id="editCodeScenes" placeholder="Mã gốc của cảnh">
+    <input type="text" id="editIDLocations" placeholder="Mã địa điểm">
+    <input type="text" id="editIDScenes" placeholder="Mã cảnh">
+    <input type="text" id="editTitle" placeholder="Mô tả về cảnh">
+    <input type="text" id="editLink" placeholder="Đường dẫn hình ảnh">
+    <input type="number" id="editPitch" placeholder="Góc nhìn dọc (Pitch)">
+    <input type="number" id="editYaw" placeholder="Góc nhìn ngang (Yaw)">
+    <button id="saveChangesBtn">LƯU</button>
+</div>
+<script src="~/js/ManageScenes.js"></script>
+
+

@@ -11,13 +11,15 @@ namespace Libs.Entity
 {
     public class Accounts
     {
-        public Accounts(Guid CodeAccount, string NameAccount, string Password, string Email, string Status)
+        public Accounts(Guid CodeAccount, string NameAccount, string Password, string Email, string Status, bool rememberLogin, string CustomCode)
         {
             this.CodeAccount = CodeAccount;
             this.NameAccount = NameAccount;
             this.Password = Password;
             this.Email = Email;
             this.Status = Status;
+            this.renemberLogin = renemberLogin;
+            this.CustomCode = CustomCode;
 
         }
         public Accounts()
@@ -27,6 +29,8 @@ namespace Libs.Entity
             this.Password = string.Empty;
             this.Email = string.Empty ;
             this.Status = string.Empty;
+            this.renemberLogin = false;
+            this.CustomCode = string.Empty;
         }
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -36,6 +40,7 @@ namespace Libs.Entity
         public string NameAccount { get; set; }
         public string Password { get; set; }
         public string Status { get; set; }
-
+        public bool renemberLogin { get; set; }
+        public string CustomCode { get; set; }
     }
 }

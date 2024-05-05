@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "bk4jOaFf63R7rsPxzo9ajvMoiJvnO1qQQ7CSrN7b6Qg=",
+  "Hash": "iYGhsnx1pEkjt7D368Bfsh5e6ERIx1aeZCRaebkC9mg=",
   "Source": "Main",
   "BasePath": "_content/Main",
   "Mode": "Default",
@@ -701,6 +701,25 @@
       "OriginalItemSpec": "wwwroot\\js\\CreateImage360.js"
     },
     {
+      "Identity": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\js\\custom_getlocation.js",
+      "SourceId": "Main",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\",
+      "BasePath": "_content/Main",
+      "RelativePath": "js/custom_getlocation.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\custom_getlocation.js"
+    },
+    {
       "Identity": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\js\\GetDSHinhRaManHinh.js",
       "SourceId": "Main",
       "SourceType": "Discovered",
@@ -737,6 +756,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\js\\index.js"
+    },
+    {
+      "Identity": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\js\\inforAccountAdmin.js",
+      "SourceId": "Main",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\",
+      "BasePath": "_content/Main",
+      "RelativePath": "js/inforAccountAdmin.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\inforAccountAdmin.js"
     },
     {
       "Identity": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\js\\ManageAccounts.js",

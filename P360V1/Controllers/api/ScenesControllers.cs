@@ -98,6 +98,51 @@ namespace API.Controllers.api
             }
         }
 
+        [HttpGet]
+        [Route("GetScenesAndHotspotWithIDLocations")]
+        public async Task<IActionResult> GetScenesAndHotspotWithIDLocations(string locationID)
+        {
+            try
+            {
+                List<Scenes> scenes = await ScenesService.GetScenesByLocationIDAsync(locationID);
+                List<HotSpots> allHotSpots = await hotSpotsService.GetAllHotSpotsAsync();
+                List<ScenesWithHotSpots> scenesWithHotSpotsA = new List<ScenesWithHotSpots>();
+
+                foreach (var scene in scenes)
+                {
+                    List<HotSpots> hotSpotsForScene = allHotSpots
+                        .Where(x => x.ScenesID == scene.IDScenes)
+
+                        .ToList();
+
+                    ScenesWithHotSpots sceneWithHotSpots = new ScenesWithHotSpots
+                    {
+
+                        CodeScenes = scene.CodeScenes,
+                        IDLocations = scene.IDLocations,
+                        IDScenes = scene.IDScenes,
+                        Title = scene.TitleScenes,
+                        Url = scene.UrlScenes,
+                        Pitch = scene.PitchScenes,
+                        Yaw = scene.YawScenes,
+                        HotSpots = hotSpotsForScene
+                    };
+
+                    scenesWithHotSpotsA.Add(sceneWithHotSpots);
+                }
+
+                return Ok(new { status = true, message = "SUCCESS", data = scenesWithHotSpotsA });
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(new { status = false, message = $"Lỗi: {ex.Message}" });
+            }
+        }
+
+
+
+
+
         [HttpDelete]
         [Route("DeleteScenes")]
         public IActionResult deleteScenes(Guid CodeScenes)

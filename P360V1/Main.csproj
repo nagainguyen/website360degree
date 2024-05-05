@@ -28,13 +28,22 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Areas\User\AccountManager\Controllers\" />
+    <Folder Include="Areas\User\AccountManager\Data\" />
+    <Folder Include="Areas\User\AccountManager\Models\" />
+    <Folder Include="Areas\User\AccountManager\Views\" />
+    <Folder Include="Areas\User\Data\" />
+    <Folder Include="Areas\Manager\AccountManager\Controllers\" />
+    <Folder Include="Areas\Manager\AccountManager\Data\" />
+    <Folder Include="Areas\Manager\AccountManager\Models\" />
+    <Folder Include="Areas\Manager\AccountManager\Views\" />
+    <Folder Include="Areas\Manager\Data\" />
     <Folder Include="Areas\Admin\AccountManager\Controllers\" />
     <Folder Include="Areas\Admin\AccountManager\Data\" />
     <Folder Include="Areas\Admin\AccountManager\Models\" />
     <Folder Include="Areas\Admin\AccountManager\Views\" />
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Controllers\" />
-    <Folder Include="Data\" />
     <Folder Include="wwwroot\images\" />
     <Folder Include="wwwroot\lib\bootstrap\" />
     <Folder Include="wwwroot\lib\bootstrap\dist\css\" />

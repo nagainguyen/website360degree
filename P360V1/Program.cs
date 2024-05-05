@@ -15,7 +15,6 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 }, ServiceLifetime.Transient);
 
 
-
 builder.Services.AddTransient<ScenesService>();
 builder.Services.AddTransient<AccountsService>();
 builder.Services.AddTransient<AreasService>();
@@ -24,10 +23,13 @@ builder.Services.AddTransient<HotSpotsService>();
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
     {
-        options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
-        options.SlidingExpiration = true;
-        options.AccessDeniedPath = "/Forbidden/";
+        options.LoginPath = "/Account/Logins";
+        options.Cookie.Name = "NguyenVanTruong";
+        //options.ExpireTimeSpan = TimeSpan.FromMinutes(20);
+        //options.SlidingExpiration = true;
+        //options.AccessDeniedPath = "/Forbidden/";
     });
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -37,7 +39,7 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/");
+    app.UseExceptionHandler("/Home/Error");
     app.UseHsts();
 }
 
@@ -48,6 +50,8 @@ app.UseRouting();
 
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.UseCookiePolicy();
 
 app.MapDefaultControllerRoute();
 

@@ -1,0 +1,82 @@
+﻿
+@{
+    ViewData["Title"] = "Manage_Areas";
+    Layout = "~/Areas/Manager/Views/Shared/_LayoutManager.cshtml";
+}
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quaản lý khu vực</title>
+<link rel="stylesheet" type="text/css" href="~/css/Styles_options.css" />
+<base href="/">
+<style>
+    button {
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+        border: none;
+        border-radius: 10px;
+    }
+
+        button:hover {
+            background-color: #008CBA;
+            color: white;
+            transform: scale(1.1);
+        }
+
+    h1 {
+        font-size: 27px;
+        font-family: Arial;
+        color: black;
+    }
+
+    #editTable {
+        display: none;
+    }</style>
+
+<h1>QUẢN LÝ DỮ LIỆU</h1>
+<h2>Quản lý các khu vực</h2>
+@*//Areas*@
+<form id="addDataForm">
+    <label for="InputNameAreas">Tên khu vực: </label>
+    <input type="text" id="InputNameAreas" placeholder="Nhập tên khu vực" required>
+    <div id="nameError" style="color: red;"></div>
+
+    <label for="InputIDAreas">Mã Khu vực: </label>
+    <input type="text" id="InputIDAreas" placeholder="Nhập mã khu vực" required>
+    <div id="idError" style="color: red;"></div>
+
+    <label for="InputUrlImageAreas">Đường dẫn: </label>
+    <input type="text" id="InputUrlImageAreas" placeholder="Nhập đường dẫn hình ảnh minh họa của khu vực..." required>
+    <div id="urlError" style="color: red;"></div>
+
+    <button type="submit">Thêm khu vực mới</button><br><br>
+</form>
+
+
+
+
+
+<h2>Danh sách chi tiết thông tin các khu vực</h2>
+<table id="AreasTable">
+    <thead>
+        <tr>
+            <th>Mã gốc khu vực </th>
+            <th>Tên khu vực</th>
+            <th>Mã khu vực</th>
+            <th>Đường dẫn hình ảnh</th>
+            <th>Lựa chọn</th>
+
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+<div id="editAreasTable" style="display: none;">
+    <input type="text" id="editCodeAreas" placeholder="Mã góc khu vực">
+    <input type="text" id="editNameAreas" placeholder="Tên khu vực">
+
+    <input type="text" id="editIDAreas" placeholder="Mã khu vực">
+    <input type="text" id="editUrlInageAreas" placeholder="ĐƯờng dẫn minh họa của khu vực... ">
+
+    <button id="saveChangesAreasBtn">SAVE</button>
+</div>
+<script src="~/js/ManageAreas.js"></script>

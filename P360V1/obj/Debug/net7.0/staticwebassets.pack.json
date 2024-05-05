@@ -7841,8 +7841,16 @@
       "PackagePath": "staticwebassets\\js\\UPDATE.js"
     },
     {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\js\\custom_getlocation.js",
+      "PackagePath": "staticwebassets\\js\\custom_getlocation.js"
+    },
+    {
       "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\js\\index.js",
       "PackagePath": "staticwebassets\\js\\index.js"
+    },
+    {
+      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\js\\inforAccountAdmin.js",
+      "PackagePath": "staticwebassets\\js\\inforAccountAdmin.js"
     },
     {
       "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\js\\site.js",

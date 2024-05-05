@@ -1,4 +1,6 @@
-﻿<!DOCTYPE html>
+﻿@using System.Security.Claims
+
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -19,9 +21,59 @@
     <!-- Custom styles for this template-->
     <link href="~/Theme/Admin/css/sb-admin-2.min.css" rel="stylesheet">
 
+
+
+
 </head>
 
 <body id="page-top">
+
+
+     @if (User.HasClaim(c => c.Type == ClaimTypes.Email))
+      {
+      <div id="emailClaim" data-email="@User.FindFirst(ClaimTypes.Email)?.Value"></div>
+
+       }
+      else
+       {
+       <text>No email found</text>
+       }
+       @if (User.HasClaim(c => c.Type == ClaimTypes.Role))
+      {
+         <div id="roleClaim" data-role="@User.FindFirst(ClaimTypes.Role)?.Value"></div>
+
+
+       }
+      else
+       {
+       <text>role found</text>
+       }
+       @if (User.HasClaim(c => c.Type == ClaimTypes.NameIdentifier))
+       {
+       <div id="codeClaim" data-code="@User.FindFirst(ClaimTypes.NameIdentifier)?.Value"></div>
+
+        }
+         else
+           {
+         <text>No Code account found</text>
+          }
+        <script>
+                        // Lấy giá trị của email claim từ phần tử HTML
+            const emailClaimElement = document.getElementById('emailClaim');
+            const emailClaimValue = emailClaimElement.dataset.email;
+
+            const codeAccountClaimElement = document.getElementById('codeClaim');
+            const codeAccountClaimValue = codeAccountClaimElement.dataset.code;
+            
+            const roleAccountClaimElement = document.getElementById('roleClaim');
+            const roleAccountClaimValue = roleAccountClaimElement.dataset.role;
+
+            // Sử dụng giá trị của email claim
+            console.log('Email Claim: ', emailClaimValue);
+            console.log('Code Account to Claim: ', codeAccountClaimValue);
+            console.log('Role Account to Claim: ', roleAccountClaimValue);
+        </script>
+
 
     <!-- Page Wrapper -->
     <div id="wrapper">
@@ -337,35 +389,40 @@
 
                         <div class="topbar-divider d-none d-sm-block"></div>
 
+
+
                         <!-- Nav Item - User Information -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"> @User.Identity.Name 
+                                                                                         
+                                </span>
+
                                 <img class="img-profile rounded-circle"
                                      src="~/Theme/Admin/img/undraw_profile.svg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                  aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#">
+                                <a class="dropdown-item" href="/Admin/Home/myAccount">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
+                                    Thông tin tài khoản
                                 </a>
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
+                                    Cài đặt
                                 </a>
-                                <a class="dropdown-item" href="#">
+                               @*  <a class="dropdown-item" href="#">
                                     <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Activity Log
-                                </a>
+                                </a> *@
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                <a class="dropdown-item" href="/Home/index" data-toggle="modal" >
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400" ></i>
-                                    Đăng xuất
+                                    Quay lại trang chủ
                                 </a>
-                               
+                                
                             </div>
                         </li>
 
@@ -404,7 +461,7 @@
     </a>
 
     <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <div class="modal fade" id="returnViewModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
          aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">

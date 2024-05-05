@@ -128,25 +128,27 @@
                                 <li>
                                     <a href="#clients">Clients</a>
                                 </li>
-                               
+                                @if (User.IsInRole("Admin"))
+                                {
+                                    <li>
+                                        <a href="/Admin/Home/Index">TRANG QUẢN LÝ</a>
+                                    </li>
+                                }
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    <li>
+                                        <a asp-area="" asp-controller="Accounts" asp-action="LogoutAccount">ĐĂNG XUẤT</a>
+                                    </li>
+                                }
+                                else
+                                {
+                                    <li>
+                                        <a asp-area="" asp-controller="Account" asp-action="Logins">ĐĂNG NHẬP</a>
+                                    </li>
+                                }
+                                
 
-                                <li>
-                                    <a id="loginLink" asp-area="" asp-controller="Account" asp-action="Logins">ĐĂNG NHẬP</a>
-                                </li>
-
-                                <script>
-                                    document.getElementById('loginLink').addEventListener('click', function () {
-                                        window.addEventListener('DOMContentLoaded', function () {
-                                            const loggedInUser = localStorage.getItem('loggedInUser');
-                                            const isLogged = localStorage.getItem('isLogged');
-
-                                            if (loggedInUser && isLogged === '1') {
-                                               
-                                                window.location.href = '/Admin/Home';
-                                            }
-                                        });
-                                    });
-                                </script>
+                           
 
 
 
@@ -181,6 +183,68 @@
 
         <!--Main Content Area-->
         <main id="content">
+            <section id="clients" class="scrollto clearfix">
+                <div class="row clearfix">
+
+                    <div class="col-3">
+
+                        <div class="section-heading">
+                            <h3>GIỚI THIỆU</h3>
+                            <h2 class="section-title">TỔNG QUAN VỀ HÌNH ẢNH 360 ĐỘ</h2>
+                            <p class="section-subtitle">
+                                Ảnh 360 độ hay còn gọi là Virtual Tour 360 là hình ảnh giúp bạn có thể thu
+                                lại toàn cảnh chỉ trong một khung ảnh.
+                                Được tích hợp công nghệ phần mềm xử
+                                lý ảnh tạo giúp hình ảnh được thực tế hơn.
+                            </p>
+                        </div>
+
+                    </div>
+
+                    <div class="col-2-3">
+
+                        <a href="#" class="col-3" onclick="getScenesAndHotspots('Location_A')">
+                            <img src="~/Image/Area/Khu-AB.jpg" alt="Company" />
+                            <div class="client-overlay" ><span>KHU A</span></div>
+                        </a>
+                        <a href="#" class="col-3" onclick="getScenesAndHotspots('Location_B')">
+                            <img src="~/Image/Area/Khu-AB.jpg" alt="Company" />
+                            <div class="client-overlay"><span>KHU B</span></div>
+                        </a>
+                        <a href="#" class="col-3" onclick="getScenesAndHotspots('locationID_B')>
+                            <img src="~/Theme/Client/images/company-images/company-logo3.png" alt="Company" />
+                            <div class="client-overlay"><span>The Man</span></div>
+                        </a>
+                        <a href="#" class="col-3">
+                            <img src="~/Theme/Client/images/company-images/company-logo4.png" alt="Company" />
+                            <div class="client-overlay"><span>Mustache</span></div>
+                        </a>
+                        <a href="#" class="col-3">
+                            <img src="~/Theme/Client/images/company-images/company-logo5.png" alt="Company" />
+                            <div class="client-overlay"><span>Goat</span></div>
+                        </a>
+                        <a href="#" class="col-3">
+                            <img src="~/Theme/Client/images/company-images/company-logo6.png" alt="Company" />
+                            <div class="client-overlay"><span>Justice</span></div>
+                        </a>
+                        <a href="#" class="col-3">
+                            <img src="~/Theme/Client/images/company-images/company-logo7.png" alt="Company" />
+                            <div class="client-overlay"><span>Ball</span></div>
+                        </a>
+                        <a href="#" class="col-3">
+                            <img src="~/Theme/Client/images/company-images/company-logo8.png" alt="Company" />
+                            <div class="client-overlay"><span>Cold</span></div>
+                        </a>
+
+                        <a href="#" class="col-3">
+                            <img src="~/Theme/Client/images/company-images/company-logo9.png" alt="Company" />
+                            <div class="client-overlay"><span>Cold</span></div>
+                        </a>
+
+                    </div>
+
+                </div>
+            </section>
             @RenderBody()
 
 
@@ -309,68 +373,7 @@
             </aside>
             <!--End of GIỚI THIỆU-->
             <!--Clients-->
-            <section id="clients" class="scrollto clearfix">
-                <div class="row clearfix">
-
-                    <div class="col-3">
-
-                        <div class="section-heading">
-                            <h3>GIỚI THIỆU</h3>
-                            <h2 class="section-title">TỔNG QUAN VỀ HÌNH ẢNH 360 ĐỘ</h2>
-                            <p class="section-subtitle">
-                                Ảnh 360 độ hay còn gọi là Virtual Tour 360 là hình ảnh giúp bạn có thể thu
-                                lại toàn cảnh chỉ trong một khung ảnh.
-                                Được tích hợp công nghệ phần mềm xử
-                                lý ảnh tạo giúp hình ảnh được thực tế hơn.
-                            </p>
-                        </div>
-
-                    </div>
-
-                    <div class="col-2-3">
-
-                        <a href="#" class="col-3">
-                            <img src="~/Image/Area/Khu-AB.jpg" alt="Company" />
-                            <div class="client-overlay"><span>KHU A</span></div>
-                        </a>
-                        <a href="#" class="col-3">
-                            <img src="~/Theme/Client/images/company-images/company-logo2.png" alt="Company" />
-                            <div class="client-overlay"><span>Fingerprint</span></div>
-                        </a>
-                        <a href="#" class="col-3">
-                            <img src="~/Theme/Client/images/company-images/company-logo3.png" alt="Company" />
-                            <div class="client-overlay"><span>The Man</span></div>
-                        </a>
-                        <a href="#" class="col-3">
-                            <img src="~/Theme/Client/images/company-images/company-logo4.png" alt="Company" />
-                            <div class="client-overlay"><span>Mustache</span></div>
-                        </a>
-                        <a href="#" class="col-3">
-                            <img src="~/Theme/Client/images/company-images/company-logo5.png" alt="Company" />
-                            <div class="client-overlay"><span>Goat</span></div>
-                        </a>
-                        <a href="#" class="col-3">
-                            <img src="~/Theme/Client/images/company-images/company-logo6.png" alt="Company" />
-                            <div class="client-overlay"><span>Justice</span></div>
-                        </a>
-                        <a href="#" class="col-3">
-                            <img src="~/Theme/Client/images/company-images/company-logo7.png" alt="Company" />
-                            <div class="client-overlay"><span>Ball</span></div>
-                        </a>
-                        <a href="#" class="col-3">
-                            <img src="~/Theme/Client/images/company-images/company-logo8.png" alt="Company" />
-                            <div class="client-overlay"><span>Cold</span></div>
-                        </a>
-
-                        <a href="#" class="col-3">
-                            <img src="~/Theme/Client/images/company-images/company-logo9.png" alt="Company" />
-                            <div class="client-overlay"><span>Cold</span></div>
-                        </a>
-
-                    </div>
-
-                </div>
-            </section>
+            
             <!--End of Clients-->
             <!--Pricing Tables-->
             <section id="pricing" class="secondary-color text-center scrollto clearfix ">
@@ -500,6 +503,7 @@
     <script src="~/Theme/Client/js/images-loaded.min.js"></script>
     <script src="~/Theme/Client/js/lightbox.min.js"></script>
     <script src="~/Theme/Client/js/site.js"></script>
+    <script src="/js/custom_getlocation.js"></script>
 
 
 </body>

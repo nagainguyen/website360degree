@@ -108,7 +108,7 @@
 
             const email = document.getElementById('InputEmail').value;
             const password = document.getElementById('InputPassword').value;
-         
+            const rememberLogin = document.getElementById('customCheck').checked; // Kiểm tra trạng thái của checkbox
 
             fetch(url, {
                 method: 'POST',
@@ -118,30 +118,42 @@
                 body: JSON.stringify({
                     Email: email,
                     Password: password,
+                    RememberLogin: rememberLogin // Ghi nhớ đăng nhập
                 }),
             })
                 .then(response => {
                     if (response.ok) {
                         return response.json();
                     } else {
-                        localStorage.removeItem('loggedInUser');
                         throw new Error('Tài khoản hoặc mật khẩu không chính xác!');
                     }
                 })
                 .then(data => {
-                        // localStorage.setItem("FullName", accounts.NameAccount);
-                        // localStorage.setItem("Email", accounts.Email);
-                        // localStorage.setItem("CodeAccount", accounts.CodeAccount);
+                    if (data.status === true) {
                         localStorage.setItem('loggedInUser', JSON.stringify(data));
                         localStorage.setItem('isLogged', 1);
-                    
-                    window.location.href = '/Admin/Home';
+                        if (rememberLogin) { // Nếu người dùng chọn "Remember Me"
+                            localStorage.setItem('rememberLogin', true); // Lưu trạng thái "Remember Me" vào local storage
+                        } else {
+                            localStorage.removeItem('rememberLogin'); // Xóa trạng thái "Remember Me" khỏi local storage nếu không chọn
+                        }
+                        window.location.href = '/';
+                    } else {
+                        throw new Error('Tài khoản hoặc mật khẩu không chính xác!');
+                    }
                 })
                 .catch(error => {
                     alert(error.message);
                 });
         });
 
+        // Kiểm tra trạng thái "Remember Me" khi trang web được tải
+        window.addEventListener('DOMContentLoaded', function () {
+            const rememberLogin = localStorage.getItem('rememberLogin');
+            if (rememberLogin === 'true') {
+                document.getElementById('customCheck').checked = true; // Đánh dấu checkbox nếu đã chọn "Remember Me" trước đó
+            }
+        });
 
     </script>
 </body>

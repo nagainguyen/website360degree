@@ -1,0 +1,83 @@
+﻿
+@{
+    ViewData["Title"] = "Manage_Account";
+    Layout = "~/Areas/Manager/Views/Shared/_LayoutManager.cshtml";
+}
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Quản lý tài khoản</title>
+<link rel="stylesheet" type="text/css" href="~/css/Styles_options.css" />
+<base href="/">
+<style>
+    button {
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+        border: none;
+        border-radius: 10px;
+    }
+
+        button:hover {
+            background-color: #008CBA;
+            color: white;
+            transform: scale(1.1);
+        }
+
+    h1 {
+        font-size: 27px;
+        font-family: Arial;
+        color: black;
+    }
+
+    #editTable {
+        display: none;
+    }</style>
+
+<h2>QUẢN LÝ DỮ LIỆU TÀI KHOẢN</h2>
+
+<form id="addDataForm">
+    <label for="InputEmail">Emial đăng nhập: </label>
+    <input type="text" id="InputEmail" placeholder="Nhập Email đăng nhập" required>
+    <div id="emailError" style="color: red;"></div>
+
+    <label for="InputName">Tên người dùng: </label>
+    <input type="text" id="InputName" placeholder="Nhập tên người dùng" required>
+    <div id="nameError" style="color: red;"></div>
+
+    <label for="InputPassword">Mật khẩu: </label>
+    <input type="text" id="InputPassword" placeholder="Nhập mật khẩu" required>
+    <div id="passwordError" style="color: red;"></div>
+
+    <label for="InputStatus">Loại tài khoản: </label>
+    <input type="text" id="InputStatus" placeholder="Nhập thông tin loại tài khoản" required>
+    <div id="statusError" style="color: red;"></div>
+
+    <button type="submit">Thêm tài khoản mới!</button><br><br>
+</form>
+
+
+<h2>Danh sách chi tiết thông tin các tài khoản</h2>
+<table id="AccountsTable">
+    <thead>
+        <tr>
+            <th>Mã gốc tài khoản </th>
+            <th>Email đăng nhập</th>
+            <th>Tên người dùng</th>
+            <th>Mật khẩu</th>
+            <th>Loại tài khoản</th>
+            <th>Lựa chọn</th>
+
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+<div id="editAccountsTable" style="display: none;">
+    <input type="text" id="editEmail" placeholder="Email đăng nhập">
+    <input type="text" id="editNameAccount" placeholder="Tên người dùng">
+
+    <input type="text" id="editPassword" placeholder="Mật khẩu">
+    <input type="text" id="editStatus" placeholder="Loại toài khoản">
+
+    <button id="saveChangesAccountBtn">SAVE</button>
+</div>
+<script src="~/js/ManageAccounts.js"></script>

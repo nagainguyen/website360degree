@@ -40,7 +40,13 @@ namespace Libs.Service
             return await applicationDbContext.Scenes.ToListAsync();
         }
 
-
+        public async Task<List<Scenes>> GetScenesByLocationIDAsync(string locationID)
+        {
+            // Lấy danh sách các cảnh có LocationID trùng khớp với tham số locationID
+            return await applicationDbContext.Scenes
+                .Where(scene => scene.IDLocations == locationID)
+                .ToListAsync();
+        }
 
         //
         public Scenes GetScenesByCode(Guid code)

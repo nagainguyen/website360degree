@@ -1,0 +1,67 @@
+﻿@{
+    ViewData["Title"] = "Thông tin tài khoản quản trị viên";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+    // if (!User.Identity.IsAuthenticated)
+    // {
+    //     // Lấy ra HttpContext
+    //     var httpContext = Context.Request.HttpContext;
+    
+    //     // Thực hiện chuyển hướng đến trang đăng nhập
+    //     httpContext.Response.Redirect("/Account/Logins");
+    // }
+}
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MANAGE SCENES</title>
+<link rel="stylesheet" type="text/css" href="~/css/Styles_options.css" />
+<base href="/">
+<style>
+    button {
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+        border: none;
+        border-radius: 10px;
+    }
+
+        button:hover {
+            background-color: #008CBA;
+            color: white;
+            transform: scale(1.1);
+        }
+
+    h1 {
+        font-size: 27px;
+        font-family: Arial;
+        color: black;
+    }
+
+    #editTable {
+        display: none;
+    }</style>
+<h2>Thông tin tài khoản quản trị viên </h2>
+
+<table id="inforAccountTable">
+    <thead>
+        <tr>
+            <th>Email đăng nhập</th>
+            <th>Tên quản trị viên</th>
+            <th>Mật khẩu</th>
+
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+<div id="editInforAccountTable" style="display: none;">
+    <input type="text" id="editEmail" placeholder="Email đăng nhập">
+    <input type="text" id="editName" placeholder="Tên quản trị viên">
+    <input type="text" id="editPassword" placeholder="Mật khẩu">
+    <button id="saveChangesAreasBtn">Lưu thông tin tài khoản</button>
+</div>
+
+
+<script src="~/js/inforAccountAdmin.js"></script>
+
+
+
+

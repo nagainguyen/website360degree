@@ -1,0 +1,87 @@
+﻿
+@{
+    ViewData["Title"] = "Manage_Locations";
+    Layout = "~/Areas/User/Views/Shared/_LayoutUser.cshtml";
+}
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MANAGE SCENES</title>
+<link rel="stylesheet" type="text/css" href="~/css/Styles_options.css" />
+<base href="/">
+<style>
+    button {
+        cursor: pointer;
+        transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+        border: none;
+        border-radius: 10px;
+    }
+
+        button:hover {
+            background-color: #008CBA;
+            color: white;
+            transform: scale(1.1);
+        }
+
+    h1 {
+        font-size: 27px;
+        font-family: Arial;
+        color: black;
+    }
+
+    #editTable {
+        display: none;
+    }
+ </style>
+
+@* //Locations *@
+
+<
+
+
+<h2>Quản lý các địa điểm</h2>
+@*//Areas*@
+<form id="addLocationsForm">
+    <label for="InputNameLocations">Tên địa điểm: </label>
+    <input type="text" id="InputNameLocations" placeholder="Vui lòng nhập tên địa điểm" required>
+    <div id="nameError" style="color: red;"></div>
+
+    <label for="InputIDLocations">Mã Khu vực: </label>
+    <input type="text" id="InputIDLocations" placeholder="Vui lòng nhập mã khu vực" required>
+    <div id="idError" style="color: red;"></div>
+
+    <label for="IDAreasOfLocations">Mã khu vực của địa điểm: </label>
+    <input type="text" id="IDAreasOfLocations" placeholder="Vui lòng nhập mã khu vực của địa điểm hiện tại..." required>
+    <div id="urlError" style="color: red;"></div>
+
+    <button type="submit">Thêm địa điểm mới</button><br><br>
+</form>
+
+
+
+
+
+<h2>Danh sách chi tiết thông tin các địa điểm</h2>
+<table id="AreasTable">
+    <thead>
+        <tr>
+            <th>Mã gốc địa điểm </th>
+            <th>Tên địa điểm</th>
+            <th>Mã địa điểm</th>
+            <th>Mã khu vực của địa điểm</th>
+            <th>Lựa Chọn</th>
+
+        </tr>
+    </thead>
+    <tbody></tbody>
+</table>
+<div id="editLocationTable" style="display: none;">
+    <input type="text" id="editCodeLocation" placeholder="Mã góc địa điểm">
+    <input type="text" id="editNameLocation" placeholder="Tên địa điểm">
+
+    <input type="text" id="editIDLocation" placeholder="Mã địa điểm">
+    <input type="text" id="editIDAreasLocation" placeholder="Mã khu vực của địa điểm... ">
+
+    <button id="saveChangesLocationBtn">Lưu thay đổi</button>
+</div>
+<script src="~/js/ManageLocations.js"></script>

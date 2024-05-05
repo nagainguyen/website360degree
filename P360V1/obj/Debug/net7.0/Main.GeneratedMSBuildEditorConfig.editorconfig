@@ -42,8 +42,68 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxNYW5hZ2VfU2NlbmVzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/lu456/OneDrive/Máy tính/PROJECT360/P360V1/Areas/Admin/Views/Home/my_Account.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSG9tZVxteV9BY2NvdW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/lu456/OneDrive/Máy tính/PROJECT360/P360V1/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2hhcmVkXF9MYXlvdXRBZG1pbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lu456/OneDrive/Máy tính/PROJECT360/P360V1/Areas/Manager/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xIb21lXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lu456/OneDrive/Máy tính/PROJECT360/P360V1/Areas/Manager/Views/Home/Manage_Account.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xIb21lXE1hbmFnZV9BY2NvdW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lu456/OneDrive/Máy tính/PROJECT360/P360V1/Areas/Manager/Views/Home/Manage_Areas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xIb21lXE1hbmFnZV9BcmVhcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lu456/OneDrive/Máy tính/PROJECT360/P360V1/Areas/Manager/Views/Home/Manage_HotSpots.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xIb21lXE1hbmFnZV9Ib3RTcG90cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lu456/OneDrive/Máy tính/PROJECT360/P360V1/Areas/Manager/Views/Home/Manage_Locations.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xIb21lXE1hbmFnZV9Mb2NhdGlvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lu456/OneDrive/Máy tính/PROJECT360/P360V1/Areas/Manager/Views/Home/Manage_Scenes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xIb21lXE1hbmFnZV9TY2VuZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lu456/OneDrive/Máy tính/PROJECT360/P360V1/Areas/Manager/Views/Shared/_LayoutManager.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcTWFuYWdlclxWaWV3c1xTaGFyZWRcX0xheW91dE1hbmFnZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lu456/OneDrive/Máy tính/PROJECT360/P360V1/Areas/User/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xIb21lXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lu456/OneDrive/Máy tính/PROJECT360/P360V1/Areas/User/Views/Home/Manage_Account.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xIb21lXE1hbmFnZV9BY2NvdW50LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lu456/OneDrive/Máy tính/PROJECT360/P360V1/Areas/User/Views/Home/Manage_Areas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xIb21lXE1hbmFnZV9BcmVhcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lu456/OneDrive/Máy tính/PROJECT360/P360V1/Areas/User/Views/Home/Manage_HotSpots.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xIb21lXE1hbmFnZV9Ib3RTcG90cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lu456/OneDrive/Máy tính/PROJECT360/P360V1/Areas/User/Views/Home/Manage_Locations.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xIb21lXE1hbmFnZV9Mb2NhdGlvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lu456/OneDrive/Máy tính/PROJECT360/P360V1/Areas/User/Views/Home/Manage_Scenes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xIb21lXE1hbmFnZV9TY2VuZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lu456/OneDrive/Máy tính/PROJECT360/P360V1/Areas/User/Views/Shared/_LayoutUser.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcVXNlclxWaWV3c1xTaGFyZWRcX0xheW91dFVzZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/lu456/OneDrive/Máy tính/PROJECT360/P360V1/Pages/Error.cshtml]
@@ -72,6 +132,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/lu456/OneDrive/Máy tính/PROJECT360/P360V1/Views/Home/Contact.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb250YWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/lu456/OneDrive/Máy tính/PROJECT360/P360V1/Views/Home/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxFcnJvci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/lu456/OneDrive/Máy tính/PROJECT360/P360V1/Views/Home/Index.cshtml]
