@@ -29,7 +29,6 @@ namespace Libs.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<string>("CustomCode")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
@@ -75,7 +74,6 @@ namespace Libs.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UrlImageAreas")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("CodeAreas");
@@ -131,7 +129,6 @@ namespace Libs.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("UrlImageLocations")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("CodeLocations");
@@ -168,6 +165,28 @@ namespace Libs.Migrations
                     b.HasKey("CodeScenes");
 
                     b.ToTable("Scenes");
+                });
+
+            modelBuilder.Entity("Libs.Entity.Token", b =>
+                {
+                    b.Property<Guid>("CodeToken")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<DateTime>("ExpriDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("IDAccount")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ValueToken")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("CodeToken");
+
+                    b.ToTable("Token");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

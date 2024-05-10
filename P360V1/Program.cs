@@ -20,6 +20,7 @@ builder.Services.AddTransient<AccountsService>();
 builder.Services.AddTransient<AreasService>();
 builder.Services.AddTransient<LocationsService>();
 builder.Services.AddTransient<HotSpotsService>();
+builder.Services.AddTransient<TokenService>();
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
     {

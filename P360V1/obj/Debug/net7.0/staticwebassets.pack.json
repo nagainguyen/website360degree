@@ -113,10 +113,6 @@
       "PackagePath": "staticwebassets\\Theme\\Admin\\css\\sb-admin-2.min.css"
     },
     {
-      "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Theme\\Admin\\forgot-password.html",
-      "PackagePath": "staticwebassets\\Theme\\Admin\\forgot-password.html"
-    },
-    {
       "Id": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Theme\\Admin\\img\\undraw_posting_photo.svg",
       "PackagePath": "staticwebassets\\Theme\\Admin\\img\\undraw_posting_photo.svg"
     },

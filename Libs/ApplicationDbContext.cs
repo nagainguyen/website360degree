@@ -13,6 +13,7 @@ namespace Libs
         public DbSet<Accounts> Accounts { get; set; }
         public DbSet<Locations> Locations { get; set; }
         public DbSet<Areas> Areas { get; set; }
+        public DbSet<Token> Token { get; set; }
         
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {

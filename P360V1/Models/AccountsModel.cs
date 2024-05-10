@@ -40,6 +40,6 @@ namespace Libs.Entity
         public string Password { get; set; }
         public string Status { get; set; }
         public bool renemberLogin { get; set; }
-        public string CustomCode { get; set; }
+        public string? CustomCode { get; set; }
     }
 }

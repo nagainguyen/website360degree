@@ -33,6 +33,6 @@ namespace Libs.Entity
         public string NameLocations { get; set; }
         public string IDLocations { get; set; }
         public string IDAreas { get; set; } 
-        public string UrlImageLocations { get; set; }
+        public string? UrlImageLocations { get; set; }
     }
 }

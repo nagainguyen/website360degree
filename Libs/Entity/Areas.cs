@@ -33,7 +33,7 @@ namespace Libs.Entity
         public Guid CodeAreas { get; set; }
         public string IDAreas { get; set; }
         public string NameAreas { get; set; }
-        public string UrlImageAreas { get; set; }
+        public string? UrlImageAreas { get; set; }
         public string CodeAccount { get; set; }
     }
 }

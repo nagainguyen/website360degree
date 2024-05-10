@@ -46,7 +46,7 @@ namespace PROJECT360.Controllers
             {
                 if (statusCode.Value == 404)
                 {
-                    return View("NotFound");
+                    return View("Error");
                 }
               
             }

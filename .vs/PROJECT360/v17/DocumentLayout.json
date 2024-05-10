@@ -3,24 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\PROJECT360\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{4E2A7398-5511-443E-8B1D-9A0358BF99B8}|P360V1\\Main.csproj|c:\\users\\lu456\\onedrive\\m\u00E1y t\u00EDnh\\project360\\p360v1\\wwwroot\\js\\inforaccountadmin.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{4E2A7398-5511-443E-8B1D-9A0358BF99B8}|P360V1\\Main.csproj|solutionrelative:p360v1\\wwwroot\\js\\inforaccountadmin.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{4E2A7398-5511-443E-8B1D-9A0358BF99B8}|P360V1\\Main.csproj|c:\\users\\lu456\\onedrive\\m\u00E1y t\u00EDnh\\project360\\p360v1\\wwwroot\\theme\\admin\\css\\sb-admin-2.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4E2A7398-5511-443E-8B1D-9A0358BF99B8}|P360V1\\Main.csproj|solutionrelative:p360v1\\wwwroot\\theme\\admin\\css\\sb-admin-2.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E2A7398-5511-443E-8B1D-9A0358BF99B8}|P360V1\\Main.csproj|c:\\users\\lu456\\onedrive\\m\u00E1y t\u00EDnh\\project360\\p360v1\\areas\\admin\\views\\home\\my_account.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4E2A7398-5511-443E-8B1D-9A0358BF99B8}|P360V1\\Main.csproj|solutionrelative:p360v1\\areas\\admin\\views\\home\\my_account.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{4E2A7398-5511-443E-8B1D-9A0358BF99B8}|P360V1\\Main.csproj|c:\\users\\lu456\\onedrive\\m\u00E1y t\u00EDnh\\project360\\p360v1\\wwwroot\\theme\\admin\\css\\sb-admin-2.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{4E2A7398-5511-443E-8B1D-9A0358BF99B8}|P360V1\\Main.csproj|solutionrelative:p360v1\\wwwroot\\theme\\admin\\css\\sb-admin-2.min.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{4E2A7398-5511-443E-8B1D-9A0358BF99B8}|P360V1\\Main.csproj|c:\\users\\lu456\\onedrive\\m\u00E1y t\u00EDnh\\project360\\p360v1\\views\\account\\logins.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{4E2A7398-5511-443E-8B1D-9A0358BF99B8}|P360V1\\Main.csproj|solutionrelative:p360v1\\views\\account\\logins.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{4E2A7398-5511-443E-8B1D-9A0358BF99B8}|P360V1\\Main.csproj|c:\\users\\lu456\\onedrive\\m\u00E1y t\u00EDnh\\project360\\p360v1\\controllers\\api\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{4E2A7398-5511-443E-8B1D-9A0358BF99B8}|P360V1\\Main.csproj|solutionrelative:p360v1\\controllers\\api\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BE548EB5-7808-47AA-979B-56B625214201}|Libs\\Libs.csproj|c:\\users\\lu456\\onedrive\\m\u00E1y t\u00EDnh\\project360\\libs\\entity\\accounts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BE548EB5-7808-47AA-979B-56B625214201}|Libs\\Libs.csproj|solutionrelative:libs\\entity\\accounts.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{4E2A7398-5511-443E-8B1D-9A0358BF99B8}|P360V1\\Main.csproj|c:\\users\\lu456\\onedrive\\m\u00E1y t\u00EDnh\\project360\\p360v1\\views\\account\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{4E2A7398-5511-443E-8B1D-9A0358BF99B8}|P360V1\\Main.csproj|solutionrelative:p360v1\\views\\account\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -42,67 +34,41 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "my_Account.cshtml",
-              "DocumentMoniker": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\PROJECT360\\P360V1\\Areas\\Admin\\Views\\Home\\my_Account.cshtml",
-              "RelativeDocumentMoniker": "P360V1\\Areas\\Admin\\Views\\Home\\my_Account.cshtml",
-              "ToolTip": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\PROJECT360\\P360V1\\Areas\\Admin\\Views\\Home\\my_Account.cshtml",
-              "RelativeToolTip": "P360V1\\Areas\\Admin\\Views\\Home\\my_Account.cshtml",
-              "ViewState": "AQIAACQAAAAAAAAAAAAAADIAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-05T21:48:47.781Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "inforAccountAdmin.js",
-              "DocumentMoniker": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\PROJECT360\\P360V1\\wwwroot\\js\\inforAccountAdmin.js",
-              "RelativeDocumentMoniker": "P360V1\\wwwroot\\js\\inforAccountAdmin.js",
-              "ToolTip": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\PROJECT360\\P360V1\\wwwroot\\js\\inforAccountAdmin.js",
-              "RelativeToolTip": "P360V1\\wwwroot\\js\\inforAccountAdmin.js",
-              "ViewState": "AQIAAEUAAAAAAAAAAAAAAHMAAABCAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-05-05T21:47:59.596Z",
+              "Title": "sb-admin-2.css",
+              "DocumentMoniker": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\PROJECT360\\P360V1\\wwwroot\\Theme\\Admin\\css\\sb-admin-2.css",
+              "RelativeDocumentMoniker": "P360V1\\wwwroot\\Theme\\Admin\\css\\sb-admin-2.css",
+              "ToolTip": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\PROJECT360\\P360V1\\wwwroot\\Theme\\Admin\\css\\sb-admin-2.css",
+              "RelativeToolTip": "P360V1\\wwwroot\\Theme\\Admin\\css\\sb-admin-2.css",
+              "ViewState": "AQIAAGUqAAAAAAAAAADwv3sqAAASAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-05-10T18:31:15.468Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Accounts.cs",
-              "DocumentMoniker": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\PROJECT360\\Libs\\Entity\\Accounts.cs",
-              "RelativeDocumentMoniker": "Libs\\Entity\\Accounts.cs",
-              "ToolTip": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\PROJECT360\\Libs\\Entity\\Accounts.cs",
-              "RelativeToolTip": "Libs\\Entity\\Accounts.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-05T21:39:34.754Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AccountsController.cs",
-              "DocumentMoniker": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\PROJECT360\\P360V1\\Controllers\\api\\AccountsController.cs",
-              "RelativeDocumentMoniker": "P360V1\\Controllers\\api\\AccountsController.cs",
-              "ToolTip": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\PROJECT360\\P360V1\\Controllers\\api\\AccountsController.cs",
-              "RelativeToolTip": "P360V1\\Controllers\\api\\AccountsController.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAqwCoAAABLAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-05T21:32:54.41Z",
+              "DocumentIndex": 1,
+              "Title": "sb-admin-2.min.css",
+              "DocumentMoniker": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\PROJECT360\\P360V1\\wwwroot\\Theme\\Admin\\css\\sb-admin-2.min.css",
+              "RelativeDocumentMoniker": "P360V1\\wwwroot\\Theme\\Admin\\css\\sb-admin-2.min.css",
+              "ToolTip": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\PROJECT360\\P360V1\\wwwroot\\Theme\\Admin\\css\\sb-admin-2.min.css",
+              "RelativeToolTip": "P360V1\\wwwroot\\Theme\\Admin\\css\\sb-admin-2.min.css",
+              "ViewState": "AQIAAConAAAAAAAAAADwv0gnAABHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-05-10T18:22:06.827Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Logins.cshtml",
-              "DocumentMoniker": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\PROJECT360\\P360V1\\Views\\Account\\Logins.cshtml",
-              "RelativeDocumentMoniker": "P360V1\\Views\\Account\\Logins.cshtml",
-              "ToolTip": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\PROJECT360\\P360V1\\Views\\Account\\Logins.cshtml",
-              "RelativeToolTip": "P360V1\\Views\\Account\\Logins.cshtml",
-              "ViewState": "AQIAAIAAAAAAAAAAAAAwwJsAAAALAAAA",
+              "Title": "ForGotPassword.cshtml",
+              "DocumentMoniker": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\PROJECT360\\P360V1\\Views\\Account\\ForGotPassword.cshtml",
+              "RelativeDocumentMoniker": "P360V1\\Views\\Account\\ForGotPassword.cshtml",
+              "ToolTip": "C:\\Users\\lu456\\OneDrive\\M\u00E1y t\u00EDnh\\PROJECT360\\P360V1\\Views\\Account\\ForGotPassword.cshtml",
+              "RelativeToolTip": "P360V1\\Views\\Account\\ForGotPassword.cshtml",
+              "ViewState": "AQIAACgAAAAAAAAAAAAAACoAAABCAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-05T21:31:46.326Z",
+              "WhenOpened": "2024-05-10T18:19:49.187Z",
               "EditorCaption": ""
             }
           ]

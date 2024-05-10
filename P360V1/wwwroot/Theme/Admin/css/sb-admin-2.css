@@ -10862,21 +10862,21 @@ a:focus {
 }
 
 .bg-login-image {
-  background: url("https://source.unsplash.com/K4mSJ7kc0As/600x800");
-  background-position: center;
-  background-size: cover;
+    background: url("https://i.pinimg.com/originals/97/d3/fb/97d3fb4b35e12c056411b9b34c802c83.jpg");
+    background-position: center;
+    background-size: cover;
 }
 
 .bg-register-image {
-  background: url("https://source.unsplash.com/Mv9hjnEUHR4/600x800");
-  background-position: center;
-  background-size: cover;
+    background: url("https://i.pinimg.com/originals/dd/31/59/dd31594daa7a87319337cd5c97977ac0.jpg");
+    background-position: center;
+    background-size: cover;
 }
 
 .bg-password-image {
-  background: url("https://source.unsplash.com/oWTW-jNGl9I/600x800");
-  background-position: center;
-  background-size: cover;
+    background: url("https://i.pinimg.com/originals/b0/f7/c1/b0f7c1c8feb2ae4bffe30ecf037f8370.jpg");
+    background-position: center;
+    background-size: cover;
 }
 
 form.user .custom-checkbox.small label {

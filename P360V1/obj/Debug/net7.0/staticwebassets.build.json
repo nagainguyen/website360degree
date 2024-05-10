@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "iYGhsnx1pEkjt7D368Bfsh5e6ERIx1aeZCRaebkC9mg=",
+  "Hash": "Qr3CFTUspv+cCZgzp/2qk9RhUhBaSZYhYXmuZweJVAc=",
   "Source": "Main",
   "BasePath": "_content/Main",
   "Mode": "Default",
@@ -2219,25 +2219,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Theme\\Admin\\css\\sb-admin-2.min.css"
-    },
-    {
-      "Identity": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Theme\\Admin\\forgot-password.html",
-      "SourceId": "Main",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\",
-      "BasePath": "_content/Main",
-      "RelativePath": "Theme/Admin/forgot-password.html",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "AssetMergeBehavior": "PreferTarget",
-      "AssetMergeSource": "",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Theme\\Admin\\forgot-password.html"
     },
     {
       "Identity": "C:\\Users\\lu456\\OneDrive\\Máy tính\\PROJECT360\\P360V1\\wwwroot\\Theme\\Admin\\img\\undraw_posting_photo.svg",
