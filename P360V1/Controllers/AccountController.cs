@@ -1,6 +1,7 @@
 ﻿using PROJECT360.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Web360.Controllers
 {
@@ -27,6 +28,15 @@ namespace Web360.Controllers
         {
             return View();
         }
+        public IActionResult CheckToken()
+        {
+            return View();
+        }
+        public IActionResult ResetPassword()
+        {
+            return View();
+        }
+        
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

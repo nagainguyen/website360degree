@@ -30,9 +30,9 @@ namespace Libs.Service
             Save();
         }
         ///       
-        public Token searchToken(Token token)
+        public Token searchToken(string token)
         {
-            return tokenRepository.searchToken(token);
+            return applicationDbContext.Token.FirstOrDefault(x => x.ValueToken == token);
         }
         ///
         public void deleteToken(Guid Code)

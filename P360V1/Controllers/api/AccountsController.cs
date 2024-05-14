@@ -12,6 +12,7 @@ using System.Net.Mail;
 using System;
 using MimeKit;
 using System.Net;
+using System.Diagnostics;
 
 namespace API.Controllers.api
 {
@@ -31,71 +32,97 @@ namespace API.Controllers.api
         /// ///////////////////////////////////////////////////////////////////////////////////////////
         /// </summary>
         /// <returns></returns>
-        //private string GenerateResetToken()
-        //{
-        //    return Guid.NewGuid().ToString();
-        //}
+        private string GenerateResetToken()
+        {
+            return Guid.NewGuid().ToString();
+        }
 
-        //private void SendResetPasswordEmail(string email, string resetPasswordLink, string userName, string resetToken)
-        //{
-        //    // Implement email sending logic here
-        //}
+        private void SendResetPasswordEmail(string email, string resetToken)
+        {
 
-        //[HttpPost]
-        //[Route("ResetPassword")]
-        //public IActionResult ResetPassword(string email)
-        //{
-        //    var user = accountsService.GetAccountsByEmail(email);
-        //    if (user == null)
-        //    {
-        //        return NotFound("User not found");
-        //    }
+            var client = new SmtpClient("smtp.gmail.com", 587)
+            {
+                Credentials = new NetworkCredential("nvtruong.it.02@gmail.com", "ktcs tons mxyf nbnb"),
+                EnableSsl = true
+            };
+            client.Send("nvtruong.it.02@gmail.com", ""+email, "Support 360DMT", "Mã đặt lại mật khẩu của bạn là: "+resetToken+"  Mã có hiệu lực trong 30 phút kể từ khi nhận được mail.");
+        }
 
-        //    // Tạo mã token và lưu vào cơ sở dữ liệu
-        //    string resetToken = GenerateResetToken();
-        //    var token = new Token
-        //    {
-        //        IDAccount = user.CodeAccount.ToString(),
-        //        ValueToken = resetToken,
-        //        ExpriDate = DateTime.Now.AddMinutes(30) // Thời gian hết hạn là 30 phút
-        //    };
+        [HttpPost]
+        [Route("EmailResetPassword")]
+        public IActionResult EmailResetPassword(AccountsModel email)
+        {
+            
 
-        //    tokenService.insertToken(token);
+            Accounts accounts = accountsService.GetAccountsByEmail(email.Email);
+            if (accounts == null)
+            {
+                return NotFound("Không tìm thấy tài khoản !");
+            }
+            else
+            {
+                string resetToken = GenerateResetToken();
+                var token = new Token
+                {
+                    IDAccount = accounts.CodeAccount.ToString(),
+                    ValueToken = resetToken,
+                    ExpriDate = DateTime.Now.AddMinutes(30) // Thời gian hết hạn là 30 phút
+                };
 
-        //    // Gửi email đến người dùng với đường dẫn đặt lại mật khẩu
-        //    string resetPasswordLink = $"{HttpContext.Request.Scheme}://{HttpContext.Request.Host}/reset-password?email={email}&token={resetToken}";
-        //    SendResetPasswordEmail(email, resetPasswordLink, user.NameAccount, resetToken);
+                tokenService.insertToken(token);
 
-        //    return Ok("Reset password email sent successfully");
-        //}
+                // Gửi email đến người dùng với đường dẫn đặt lại mật khẩu
+                SendResetPasswordEmail(email.Email, resetToken);
 
-        //[HttpPost]
-        //[Route("SetNewPassword")]
-        //public IActionResult SetNewPassword(TokenModel tokenModel)
-        //{
-        //    Accounts accounts = accountsService.GetAccountsByEmail(tokenModel.IDAccount);
-        //    if (accounts == null)
-        //    {
-        //        return NotFound("User not found");
-        //    }
-        
-        //    // Kiểm tra mã token và thời gian hết hạn
-        //    var resetPasswordToken = tokenService.searchToken(tokenModel);
-        //    if (resetPasswordToken == null)
-        //    {
-        //        return BadRequest("Invalid or expired token");
-        //    }
+                return Ok("Reset password email sent successfully");
+            }
 
-        //    // Đặt lại mật khẩu
-        //    accounts.Password = tokenModel.NewPassword;
-        //    accountsService.UpdateAccounts(user);
+            // Tạo mã token và lưu vào cơ sở dữ liệu
+           
+        }
 
-        //    // Xóa mã token đã sử dụng
-        //    tokenService.DeleteToken(resetPasswordToken);
 
-        //    return Ok("Password reset successfully");
-        //}
-        //////////////////////////////////////////////////////////////////
+        [HttpPost]
+        [Route("CheckToken")]
+        public IActionResult CheckToken(TokenModel tokenModel)
+        {
+            // Kiểm tra mã token và thời gian hết hạn
+            var resetPasswordToken = tokenService.searchToken(tokenModel.ValueToken);
+
+            if (resetPasswordToken == null)
+            {
+                return BadRequest(new { error = "Invalid or expired token" });
+            }
+
+            if (resetPasswordToken.ExpriDate < DateTime.UtcNow)
+            {
+                return BadRequest(new { error = "Token has expired" });
+            }
+
+            return Ok(new { message = resetPasswordToken.IDAccount });
+        }
+
+
+        [HttpPost]
+        [Route("UpdatePassword")]
+        public IActionResult UpdatePassword(AccountsModel accountsModel)
+        {
+            Accounts accounts = accountsService.GetAccountsByCode(accountsModel.CodeAccount);
+            if (accounts == null)
+            {
+                return NotFound(new { status = false, message = "Account not found" });
+            }
+
+            accounts.Password = accountsModel.Password;
+
+            accountsService.updateAccounts(accounts);
+
+            return Ok(new { status = true, message = "Cập nhập mật khẩu thành công!", data = accounts });
+        }
+
+
+
+        ////////////////////////////////////////////////////////////////
 
         [HttpPost]
         [Route("InsertAccount")]
@@ -137,12 +164,12 @@ namespace API.Controllers.api
             Accounts accounts = accountsService.GetAccountsByEmail(accountsModel.Email);
             if (accounts != null && accounts.Password.Equals(accountsModel.Password))
             {
-                var client = new SmtpClient("smtp.gmail.com", 587)
-                {
-                    Credentials = new NetworkCredential("nvtruong.it.02@gmail.com", "ktcs tons mxyf nbnb"),
-                    EnableSsl = true
-                };
-                client.Send("nvtruong.it.02@gmail.com", "thanhlochuynh102@gmail.com", "test", "testbody");
+                //var client = new SmtpClient("smtp.gmail.com", 587)
+                //{
+                //    Credentials = new NetworkCredential("nvtruong.it.02@gmail.com", "ktcs tons mxyf nbnb"),
+                //    EnableSsl = true
+                //};
+                //client.Send("nvtruong.it.02@gmail.com", "thanhlochuynh102@gmail.com", "test", "testbody");
                 
                 //HttpContext.Session.SetString("FullName", accounts.NameAccount);
                 //HttpContext.Session.SetString("Email", accounts.Email);

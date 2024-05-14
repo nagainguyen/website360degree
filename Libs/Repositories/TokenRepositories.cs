@@ -27,7 +27,7 @@ namespace Libs.Repositories
             }
             public Token searchToken(Token token)
             {
-                return _dbContext.Token.FirstOrDefault(t => t.IDAccount == token.IDAccount && t.ValueToken == token.ValueToken && t.ExpriDate > DateTime.Now);
+                return _dbContext.Token.FirstOrDefault(t =>  t.ValueToken == token.ValueToken);
             }
 
             public void deleteToken(Token token)
