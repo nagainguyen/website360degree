@@ -64,7 +64,7 @@
             <th>Tên khu vực</th>
             <th>Mã khu vực</th>
             <th>Đường dẫn hình ảnh</th>
-            <th>Lựa chọn</th>
+            @* <th>Lựa chọn</th> *@
 
         </tr>
     </thead>
@@ -79,4 +79,51 @@
 
     <button id="saveChangesAreasBtn">SAVE</button>
 </div>
-<script src="~/js/ManageAreas.js"></script>
+<link rel="stylesheet" href="https://cdn.datatables.net/2.0.7/css/dataTables.dataTables.css" />
+  
+<script src="https://cdn.datatables.net/2.0.7/js/dataTables.js"></script>
+
+
+
+<script type="text/javascript">
+    var js = jQuery.noConflict(true);
+    js(document).ready(function () {
+        LoadListing();
+    });
+
+    async function LoadListing() {
+
+
+        try {
+            const response = await fetch('/api/Areas/ListAreas');
+            if (!response.ok) {
+                throw new Error(`ERROR WHEN RETRIEVING DATA! ${response.status} - ${response.statusText}`);
+            }
+            const { data } = await response.json();
+            console.log(data);
+            dataListAreas = data.map(item => ({
+                codeAreas: item.codeAreas,
+                nameAreas: item.nameAreas,
+                idAreas: item.idAreas,
+                url: item.urlImageAreas
+            }));
+            js('#AreasTable').DataTable({
+                data: dataListAreas,
+                columns: [
+                    { data: 'codeAreas', title: 'Mã gốc khu vực' },
+                    { data: 'nameAreas', title: 'Tên khu vực' },
+                    { data: 'idAreas', title: 'Mã khu vực' },
+                    { data: 'url', title: 'Đường dẫn hình ảnh' }
+                ]
+            });
+          
+        } catch (error) {
+            console.error('ERROR WHEN RETRIEVING DATA!', error);
+        }
+
+        
+    }
+
+    // Các hàm FunEdit và FunRemove không thay đổi.
+</script>
+@* <script src="~/js/ManageAreas.js"></script> *@

@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', function () {
                  <td>${data.codeAreas}</td>
                  <td>${data.nameAreas}</td>
                  <td>${data.idAreas}</td>
-
+                 <td>${data.urlImageAreas}</td>
                 <td>
                     <button onclick="editAreas('${data.codeAreas}')">UPDATE</button>
                     <button onclick="confirmDeleteAreas('${data.codeAreas}')">DELETE</button>
